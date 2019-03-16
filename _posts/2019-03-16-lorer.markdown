@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "Lorem!"
-date:   2019-03-16 21:18:00
+date:   2019-03-16 15:18:00
 categories: 
+permalink: /en/blog/lorem
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices vel felis sit amet efficitur. Etiam at tincidunt elit. Vivamus congue viverra pulvinar. Vestibulum facilisis massa eu ultrices tempus. Sed vel ornare urna. Nunc et mauris eu turpis finibus facilisis facilisis volutpat ex. In vehicula consequat tortor at facilisis. Cras semper velit vel ex maximus blandit. Donec vehicula, libero vitae elementum fringilla, enim erat egestas enim, nec rhoncus ipsum nisi sit amet ipsum. Phasellus neque nunc, malesuada quis ullamcorper et, lacinia sed tellus. Nulla sed hendrerit est, eu sodales tellus. Fusce vel est at erat pretium aliquet. In bibendum enim vel orci ornare semper. Nunc sem felis, lobortis consequat ultricies non, mollis ut lectus. Donec condimentum dui ut gravida bibendum. Nulla mattis lorem eu tincidunt fermentum.
