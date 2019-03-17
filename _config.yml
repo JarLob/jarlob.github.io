@@ -7,7 +7,7 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 15
-baseurl: /
+baseurl: https://jarlob.github.io/
 domain_name: 'https://jarlob.github.io'
 #google_analytics: 'UA-XXXXXXXX-X'
 plugins: [jekyll-paginate]
