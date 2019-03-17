@@ -1,6 +1,6 @@
-name: Your New Jekyll Site
-description: Blogging about stuffs
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+name: Jaroslav Lobačevski
+description: Blogging about AppSec
+meta_description: "Jaroslav Lobačevski"
 
 future: true
 markdown: kramdown
@@ -8,10 +8,10 @@ highlighter: rouge
 logo: false
 paginate: 15
 baseurl: /
-domain_name: 'http://yourblog-domain.com'
-google_analytics: 'UA-XXXXXXXX-X'
-gems: [jekyll-paginate]
+domain_name: 'https://jarlob.github.io'
+#google_analytics: 'UA-XXXXXXXX-X'
+plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url:            'blog url'
-author:         'Your Name'
+url:            'https://jarlob.github.io'
+author:         'Jaroslav Lobačevski'
