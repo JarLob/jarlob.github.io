@@ -10,19 +10,19 @@ Recently I was auditing a website for security vulnerabilities. I found few good
 
 After some time I found and successfully exploited a flaw in the wrapper, but when I tried to [disclose the vulnerability](https://github.com/ThingEngineer/PHP-MySQLi-Database-Class/issues/823) to developers I faced a denial :) First I was told it is a fault of the user of the library - lack of validation, a "primary junior mistake", then I was told it is "not a bug" and "that mysqlidb doesn't support parameterized queries", it is "not a security vulnerability" and the "library never been advertising parameterized queries".
 
-[Parameterized queries](https://www.databasejournal.com/features/mysql/a-guide-to-mysql-prepared-statements-and-parameterized-queries.html) are also known as [prepared](http://php.net/manual/en/mysqli.quickstart.prepared-statements.php) [statements](https://en.wikipedia.org/wiki/Prepared_statement). The safe injection free technique is also often called parameter binding. The idea is that the application supplies (binds) values separately from the SQL expression that contains just placeholders like:
+[Parameterized queries](https://www.databasejournal.com/features/mysql/a-guide-to-mysql-prepared-statements-and-parameterized-queries.html) are also known as [prepared](http://php.net/manual/en/mysqli.quickstart.prepared-statements.php) [statements](https://en.wikipedia.org/wiki/Prepared_statement). The safe injection-free technique is also often called parameter binding. The idea is that the application supplies (binds) values separately from the SQL expression that contains just placeholders like:
 ```php
     $mysqli = new mysqli('host', 'username', 'password', 'databaseName');
     $stmt = $mysqli->prepare('SELECT * FROM products WHERE name = ?');
     $stmt->bind_param('s', $_POST['userInput']);
     $stmt->execute();
 ```
-The library does advertise using it. It is writtern in the description of the repository - "Wrapper for a PHP MySQL class, which utilizes MySQLi and prepared statements". Also it is not just a misleading statement, it is what they [actually do](https://github.com/ThingEngineer/PHP-MySQLi-Database-Class/blob/810ffe981519f04bdf4ff734bd43cf0be3c15757/MysqliDb.php#L1598).
+The library does advertise using it. It is written in the description of the repository - "Wrapper for a PHP MySQL class, which utilizes MySQLi and prepared statements". Also it is not just a misleading statement, it is what they [actually do](https://github.com/ThingEngineer/PHP-MySQLi-Database-Class/blob/810ffe981519f04bdf4ff734bd43cf0be3c15757/MysqliDb.php#L1598).
 
 So how come it is vulnerable? The library provides object interface, that in the end builds the prepared statement dynamically. The Select example above would look like:
 ```php
-    $db = new MysqliDb ('host', 'username', 'password', 'databaseName');
-    $db->where ('name', $_POST['userInput']);
+    $db = new MysqliDb('host', 'username', 'password', 'databaseName');
+    $db->where('name', $_POST['userInput']);
     $db->get('products');
 ```
 The issue is that because of special "forkaround" in `where` function if `$whereValue` happens to be an array, `$operator` value is extracted from it. The value is non-parametrerized, i.e. it gets into generated SQL statement without any validation.

@@ -6,7 +6,7 @@ categories: HackAndTell TvarkauMiesta
 cover:      TM.png
 permalink:  /lt/blog/kodel-hakeriai-nemoka-baudu
 ---
-*Straipsnis pirma publikuotas 2019-02-20 [Linkedin](https://www.linkedin.com/pulse/kod%C4%97l-hakeriai-nemoka-baud%C5%B3-jaroslav-loba%C4%8Devski/).*  
+*Straipsnis pirmą kartą publikuotas 2019-02-20 [Linkedin](https://www.linkedin.com/pulse/kod%C4%97l-hakeriai-nemoka-baud%C5%B3-jaroslav-loba%C4%8Devski/).*  
 Manau [https://tvarkaumiesta.lt](https://tvarkaumiesta.lt) yra puikus puslapis suteikiantis galimybę teikti pasiūlymus miesto tvarkymo klausimais arba įskųsti kokį pažeidėją ;) Teko ir pačiam pasinaudoti juo. Mano dėmesį patraukė keturios ikonos po paties sukurtu pranešimu kurių iš pradžių net nepastebėjau:
 
 ![Pranešimas](tm_icons.png)
