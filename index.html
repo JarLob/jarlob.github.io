@@ -44,7 +44,10 @@ about: 'about.html'
             {{ post.excerpt }} <a class="read-more" href="{{ post.url }}">&raquo;</a>
         </section>
         <footer class="post-meta">
-            {% if site.author %}
+            {% if post.author %}
+                <img class="author-thumb" src="/assets/images/{{ post.profileimage }}" alt="Author's profile picture" nopin="nopin" />
+                {{ post.author }}            
+            {% elsif site.author %}
                 <img class="author-thumb" src="/assets/images/profile.png" alt="Author's profile picture" nopin="nopin" />
                 {{ site.author }}
             {% endif %}

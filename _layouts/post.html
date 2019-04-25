@@ -19,7 +19,12 @@ post_class: post-template
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
+                {% if page.author %}
+                    {{ page.author }}
+                {% elsif site.author %}
+                    {{ site.author }}
+                {% endif %}
                 {% if page.categories.size > 0 %}
                     {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
                 {% endif %}
@@ -63,7 +68,16 @@ post_class: post-template
 
         <footer class="post-footer">
             <!-- If we want to display author's name and bio -->
-            {% if site.author %}
+            {% if page.author %}
+                <figure class="author-image">
+                    <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/{{ page.profileimage }})">
+                    <span class="hidden">{{page.author}}'s Picture</span></a>
+                </figure>
+                <section class="author">
+                    <!-- Author Name -->
+                    <h4> {{ page.author }} </h4>
+                </section>
+            {% elsif site.author %}
                 <figure class="author-image">
                     <a class="img" href="{{ site.baseurl }}" style="background-image: url(/assets/images/profile.png)">
                     <span class="hidden">{{site.author}}'s Picture</span></a>
