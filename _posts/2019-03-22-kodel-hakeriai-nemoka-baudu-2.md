@@ -6,7 +6,7 @@ categories: HackAndTell TvarkauMiesta
 cover:      TM2.png
 permalink:  /lt/blog/kodel-hakeriai-nemoka-baudu-2
 ---
-Po praeito [straipsnio](https://www.linkedin.com/pulse/kod%C4%97l-hakeriai-nemoka-baud%C5%B3-jaroslav-loba%C4%8Devski/) kai kas atkreipė mano dėmesį į tai, kad [tvarkaumiesta.lt](https://www.tvarkaumiesta.lt/) (toliau TM) kodas yra atviras ir netgi galima pasižiūrėti [kaip buvo ištaisyta saugumo skylė](https://bitbucket.org/emiestas/tvarkau-miesta_moved/commits/f03a936134a7e27982df54350a8960bdb04ea05a). Tai paskatino mane paanalizuoti TM giliau.
+Po praeito [straipsnio](/lt/blog/kodel-hakeriai-nemoka-baudu) kai kas atkreipė mano dėmesį į tai, kad [tvarkaumiesta.lt](https://www.tvarkaumiesta.lt/) (toliau TM) kodas yra atviras ir netgi galima pasižiūrėti [kaip buvo ištaisyta saugumo skylė](https://bitbucket.org/emiestas/tvarkau-miesta_moved/commits/f03a936134a7e27982df54350a8960bdb04ea05a). Tai paskatino mane paanalizuoti TM giliau.
 
 > tl;dr: Radau saugumo pažeidimų kurie leido pilną prieigą prie puslapio duomenų bazės su vartotojų asmens kodas ir kontaktais, prisijungimą prie savivaldybės vidinės dokumentų valdymo sistemos, prieigą prie privačių šifravimo raktų naudojamų darbui su [e.valdžios vartais](https://www.epaslaugos.lt/portal/login) ir dar daugiau.
 
