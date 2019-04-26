@@ -1,7 +1,7 @@
 ---
 layout:       post
 title:        "Kaip aš nulaužiau Vilnius.lt"
-date:         2019-03-23 12:00:00
+date:         2019-04-12 12:00:00
 categories:   HackAndTell Vilnius.lt
 cover:        roger.png
 permalink:    /lt/blog/Kaip-as-nulauziau-vilnius-lt
