@@ -19,7 +19,7 @@ post_class: post-template
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
+                <img src="https://www.devsecurity.eu/icons{{ page.permalink }}.svg" height=15 width=15><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
                 {% if page.author %}
                     {{ page.author }}
                 {% elsif site.author %}
