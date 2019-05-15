@@ -10,7 +10,7 @@ I find deserialization vulnerabilities somewhat special and beautiful. The fact 
 
  The researcher noticed, that .NET resource file formats - both compiled (.resources) and not (.resx) store serialized objects inside of them. So if an attacker can tamper the file, he can execute arbitrary code during deserialization when the files are opened. Users don't think resource files can be malicious. Usually files with these extensions are opened in code editors, but I immediately thought about .NET decompilers. Unfortunately or thankfully :) I didn't notice that Soroush already found these vulnerabilities in [.NET Reflector](https://www.nccgroup.trust/uk/our-research/technical-advisory-code-execution-by-viewing-resource-files-in-net-reflector/) and [ILSpy](https://github.com/icsharpcode/ILSpy/issues/1196).
 
-First I needed to create an executable for testing. So I've created an empty C# project in Visual Studio and added a string resource. It is available on [GitHub](https://github.com/JarLob/EvilResx). For PoC payload generation I've used [ysoserial.net](https://github.com/pwntester/ysoserial.net) by Alvaro Muñoz.
+First I needed an executable for testing. So I've created an empty C# project in Visual Studio and added a string resource. It is available on [GitHub](https://github.com/JarLob/EvilResx). For PoC payload generation I've used [ysoserial.net](https://github.com/pwntester/ysoserial.net) by Alvaro Muñoz.
 
 ![Payload](resx.png)
 
