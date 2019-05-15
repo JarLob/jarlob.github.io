@@ -42,7 +42,7 @@ There is an important gotcha - if the `dirPath` is not checked to end with a dir
 After two weeks I've got another release candidate to test. They still sanitized the path, but used some my suggestions, so I didn't find a way to bypass it. The vulnerability was finally fixed in [Aspose.ZIP for .NET v19.1](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+19.1+Release+Notes).
 
 Timeline:  
-2018.10.04 - Issue found and reported by email security(at)aspose.com without a reply.  
+2018.10.04 - Issue is found and reported by email security(at)aspose.com without a reply.  
 2018.10.10 - Successfully reported in a private Aspose forum conversation.  
 2018.11.21 - Aspose.ZIP for .NET v18.11 is released.  
 2018.11.26 - I finally notice a new version available, provide a different payload that is not mitigated.  
