@@ -1,12 +1,12 @@
 ---
 layout:     post
 title:      "Path Traversal in Aspose.ZIP for .NET"
-date:       2019-05-13 12:00:00
+date:       2019-05-23 12:00:00
 categories: HackAndTell PathTraversal Aspose.ZIP
 cover:      aspose_zip-for-net.png
 permalink:  /en/blog/aspose-zip-path-traversal
 ---
-I had been getting newsletters from [Aspose](https://www.aspose.com/) for quite some time. They didn't bother me too often and I liked scrolling the emails to see what new libraries they have implemented. Once, a new library named [Aspose.ZIP for .NET](https://products.aspose.com/zip/net) caught my eye. I wondered if it is resistant to an obvious attack vector - path traversal, that was on hype recently because one company tried to re-brand the vulnerability name :)
+I had been getting newsletters from [Aspose](https://www.aspose.com/) for quite some time. They didn't bother me too often and I liked scrolling the emails to see what new libraries they have implemented. Once, a new library named [Aspose.ZIP for .NET](https://products.aspose.com/zip/net) caught my eye. I wondered if it is resistant to an obvious attack vector - path traversal that was on hype recently because one company tried to re-brand the vulnerability name :)
 
 It took me few minutes to find a [script](https://github.com/ptoomey3/evilarc) to prepare a zip file with a payload. I've put `../../../../../../../../../../../../../../../temp/evil.txt` in a payload and wrote a sample program using the Aspose library:
 ```cs
@@ -18,13 +18,13 @@ using (FileStream zipFile = File.Open(@"evil.zip", FileMode.Open))
     }
 }
 ```
-Quick test revealed it was indeed vulnerable - the `evil.txt` was extracted to `c:\temp\` directory one level up from `c:\temp\dump\` (`/` was conveniently accepted on Windows). The multiple `../` were used to get to the root directory on current disk, since the directive is ignored if already in the root folder, so the payload was independent from the extraction directory. I used `/temp/`, but an attacker could specify `/Windows/System32/` (it would need to be executed in administrator context) or any other directory. It was tested on Windows, but would work on Linux too with obvious adjustments to the payload. I've managed to contact developers on official support forum, but the story doesn't end here...
+Quick test revealed it was indeed vulnerable - the `evil.txt` was extracted to `c:\temp\` directory one level up from `c:\temp\dump\` (`/` was conveniently accepted on Windows). The multiple `../` were used to get to the root directory on current disk, since the directive is ignored if already in the root folder, so the payload was independent from the extraction directory. I used `/temp/`, but an attacker could specify `/Windows/System32/` (it would need to be executed in administrator context) or any other directory. It was tested on Windows, however it would work on Linux too with obvious adjustments to the payload. I've managed to contact developers on official support forum, but the story doesn't end here...
 
-After more than month a new version of [Aspose.ZIP for .NET v18.11](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+18.11+Release+Notes) was released. I was not given any credits (oh well) and the older version was still available for download too. Since I wasn't notified I've noticed it only after a week. Testing the new version revealed that this time an attacker could put an absolute path in a payload to extract the file to any directory. Aspose was notified and after three days a new version [Aspose.ZIP for .NET v18.11.1](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+18.11.1+Release+Notes) was released.
+After more than a month a new version of [Aspose.ZIP for .NET v18.11](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+18.11+Release+Notes) was released. I was not given any credits (oh well) and the older version was still available for download too. Since I wasn't notified I've noticed it only after a week. Testing the new version revealed that this time an attacker could put an absolute path in a payload to extract the file to any directory. Aspose was notified and after three days a new version [Aspose.ZIP for .NET v18.11.1](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+18.11.1+Release+Notes) was released.
 
 Simple payloads didn't work with the release, so I decided to decompile and look into the sources. Although the library appeared to be obfuscated I have managed to reverse-engineer the sanitization function and found a flaw there: a part of the algorithm was to have a single pass over extraction path and remove `../` from it. Needless to say it is easily bypassable with `....//temp/evil.txt`. After sanitization it becomes `../temp/evil.txt`. The new bypass was sent to developers again.
 
-This time after few weeks Aspose provided me a private build for testing before the release. It could have been simpler if they could just provide me a non-obfuscated version of the extraction function... Anyway, I found yet another bypass: ` \temp\evil.txt` (notice the leading whitespace) and reminded the developers that my recommendation in the very beginning was not to sanitize the path, but normalize/canonicalize it and verify if the result is under expected directory, like:
+This time after few weeks Aspose provided me a private build for testing before the release. It could have been simpler if they could just provide me a non-obfuscated version of the extraction function... Anyway, I found yet another bypass: ` \temp\evil.txt` (notice the leading whitespace) and reminded the developers that my recommendation in the very beginning was not to sanitize the path, but to normalize/canonicalize it and verify if the result is under expected directory, like:
 ```cs
 public void Extract(string dirPath, string fileName)
 {
