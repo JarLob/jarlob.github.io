@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,6 +10,8 @@
     <title>{{ site.name }} - {{ page.title }}</title>
 {% endif %}
     <meta name="description" content="{{ site.meta_description }} {{ page.title }}" />
+
+    {% if page.cover %}<meta property="og:image" content="url({{ page.cover }})" />{% endif %}
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
