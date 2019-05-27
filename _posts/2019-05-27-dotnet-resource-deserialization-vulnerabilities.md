@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Vulnerable deserialization in dnSpy and Resource.NET"
-date:       2019-05-13 12:00:00
+date:       2019-05-27 12:00:00
 categories: HackAndTell Deserialization dnSpy Resource.NET
 cover:      bart-simpson-generator.png
 permalink:  /en/blog/dnspy-deserialization-vulnerability
@@ -32,7 +32,7 @@ The developer of dnSpy pointed out there is a setting I wasn't aware of in optio
 
 But for some reason the setting was ON by default. He decided to remove the setting completely and immediately released a new version with the fix 5.0.11.
 
-After that I tried to find what else potentially vulnerable resource editors are out there. One application I found was [Resource .NET](https://fishcodelib.com/Resource.htm). It allows editing .resx and .resources files. I used [EvilResx.ClickMe.resources](EvilResx.ClickMe.resources) from intermediate build folder and [ClickMe.resx](ClickMe.resx) from sources of my [PoC project](https://github.com/JarLob/EvilResx). However after contacting the owner he claimed it is a vulnerability in Microsoft .NET Framework [ResourceReader class](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/Resources/ResourceReader.cs) :). I've sent him multiple ideas how it could be fixed:
+After that I tried to find what else potentially vulnerable resource editors are out there. One application I found was [Resource.NET](https://fishcodelib.com/Resource.htm). It allows editing .resx and .resources files. I used [EvilResx.ClickMe.resources](EvilResx.ClickMe.resources) from intermediate build folder and [ClickMe.resx](ClickMe.resx) from sources of my [PoC project](https://github.com/JarLob/EvilResx). However after contacting the owner he claimed it is a vulnerability in Microsoft .NET Framework [ResourceReader class](https://github.com/dotnet/corefx/blob/master/src/Common/src/CoreLib/System/Resources/ResourceReader.cs) :). I've sent him multiple ideas how it could be fixed:
 1. See if the file contains a serialized object and show a warning.  
 2. Check if the file has the [Mark of the Web](https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/ms537628(v=vs.85)) that indicates it was downloaded and show a warning (as Visual Studio does).  
 3. Implement custom .resources parser as [ILSpy did](https://github.com/icsharpcode/ILSpy/commit/c17c3c739f339563749f73f0a4f2d1d65516c797).  
@@ -42,6 +42,6 @@ But as far as I know nothing was done.
 Timeline:  
 2018.12.17 - Reported the issue to the author of dnSpy.  
 2018.12.18 - Six(!) hours later a new release v5.0.11 with a fix was made.  
-2018.12.18 - Reported the vulnerabilty to the author of [Resource .NET](https://fishcodelib.com/Resource.htm).  
-2018.12.18 - Resource .NET replied it is a vulnerability in Microsoft framework.  
-2019.05.xx - Resource .NET vulnerability publicly disclosed.  
+2018.12.18 - Reported the vulnerabilty to the author of [Resource.NET](https://fishcodelib.com/Resource.htm).  
+2018.12.18 - Resource.NET replied it is a vulnerability in Microsoft framework.  
+2019.05.27 - Resource.NET vulnerability publicly disclosed.  
