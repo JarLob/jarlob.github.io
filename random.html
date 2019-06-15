@@ -6,11 +6,22 @@
 
 <body>
 
+<div id="rand"/>
+
 <script>
+var el = document.getElementById('rand');
+
+for(var i=0; i<120; ++i) {
+    el.innerHTML = el.innerHTML + Math.random() + ",<br/>"
+}
+
+el.innerHTML = el.innerHTML + "<br>The values below are not necessarily sequential:<br><br>"
+
 var intervalID = window.setInterval(GenerateAndWriteRandom, 500);
 
 function GenerateAndWriteRandom() {
-  document.write(Math.random() + ",<br/>")
+  el.appendChild(document.createTextNode(Math.random() + ","))
+  el.appendChild(document.createElement("br"))
 }
 </script>
 
