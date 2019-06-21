@@ -9,8 +9,7 @@ cover:      SERVERIAILT.jpg
 permalink:  /lt/blog/atsakingas-atskleidimas-lietuvos-pavyzdys
 ---
 
-⚠️*Šiandien publikuoju svečio atsiųstą straipsnį:*
-
+⚠️*Šiandien publikuoju svečio atsiųstą straipsnį:*  
 Kiekvienas viešai prieinamas servisas yra pažeidžiamas. Nei viena įmonė nėra apsaugota nuo programuotojų klaidų, kad ir kiek ji investuoja į saugumą. Todėl kiekviena įmonė turi būti pasiruošusi saugumo incidentui, turėti planą.
 
 
