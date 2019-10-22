@@ -1,11 +1,11 @@
----
-author:     Anonymous
-profileimage: anonymous.jpg
-layout:     post
-title:      "XSS serveriai.lt puslapyje"
-date:       2019-10-21 12:00:00
-categories: HackAndTell ServeriaiLT
-cover:      serveriai-xss.png
+---
+author:     Anonymous
+profileimage: anonymous.jpg
+layout:     post
+title:      "XSS serveriai.lt puslapyje"
+date:       2019-10-21 12:00:00
+categories: HackAndTell ServeriaiLT
+cover:      serveriai-xss.png
 permalink:  /lt/blog/xss-serveriai-lt-puslapyje
 ---
 
