@@ -13,6 +13,7 @@ Open source projects I am or was actively involved:
 You can find me on [Twitter](https://twitter.com/yarlob), [GitHub](https://github.com/JarLob), [Linkedin](https://www.linkedin.com/in/yarlob/) and you can reach me at jarlob+gh()gmail.com
 
 ### Disclosures:
+Authenticode signature validation bypass in [Autodesk Dynamo BIM (CVE-2020-7079) and SoundSwitch](/en/blog/Authenticode-verification-vulnerability-pattern-CreateFromSignedFile)  
 Arbitrary code execution in [Resource.NET](https://fishcodelib.com/Resource.htm) [(not fixed)](/en/blog/dnspy-deserialization-vulnerability)  
 Arbitrary code execution in [dnSpy](/en/blog/dnspy-deserialization-vulnerability)  
 Path Traversal in [Aspose.ZIP for .NET](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+19.1+Release+Notes)  
