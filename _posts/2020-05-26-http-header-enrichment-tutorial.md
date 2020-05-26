@@ -6,13 +6,13 @@ categories: HackAndTell MobileInternet
 cover:      
 permalink:  /en/blog/http-header-enrichment-tutorial
 ---
-Since I believe [the issue I wrote previously about](en/blog/mobile-data-leak) is not limited to Lithuania, but I physically cannot check all mobile operators in the world I decided to write a short tutorial you can follow to check the situation in your country.
+Since I believe [the issue I wrote previously about](https://jarlob.github.io/en/blog/mobile-data-leak) is not limited to Lithuania, but I physically cannot check all mobile operators in the world I decided to write a short tutorial you can follow to check the situation in your country.
 
 1. Use any server you like that reflects back request headers to see what headers are injected. Below is an example with the postman service. (*Notice that the address is not https.* You may also try not only GET, but POST and other types of requests).<br/><br/>
 ```
 curl http://postman-echo.com/get
 ```
-Issue the request over cable internet and then over mobile internet to compare the results and see the injected headers. If you find some constant headers injected at this step, congratulations - you just caught your provider attaching a super cookie to your identity.  
+Issue the request over cable internet and then over mobile internet to compare the results and see the injected headers. If you find some constant headers injected at this step, congratulations - you just caught your provider attaching a super cookie to your identity. But this is not the max that can be achieved. See step 3.  
 2. If nothing suspicious was found:
     * Identify a mobile app that sometimes asks you to switch to mobile internet instead of WIFI. It can be some local Android/iOS application specific to your country.  
 Next step is to reverse engineer it - decompile it in order to understand what addresses it calls or install it on a rooted phone to intercept HTTP traffic it makes.  
