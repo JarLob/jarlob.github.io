@@ -26,7 +26,7 @@ curl http://postman-echo.com/get --header "Host: selfcare.purple-mobile.com"
 ```
 It is possible you'll be able to see the injected headers because the provider checks only the `Host:` header instead of the real destination.
 
-4. If you found the headers, try to issue the identified http requests from step 2. with modified headers and see if it bypasses authorization logic in the web service. You may try it from the same mobile network to see if the spoofed value is not overwritten and from a non-mobile network provider. It can be done with curl like:<br/><br/>
+4. If you found the headers, try to issue the identified http requests from step 2. with modified headers and see if it bypasses authorization logic in the web service. You may try it from the same mobile network to see if the spoofed value is not overwritten and from a non-mobile network provider. The service may accept your supplied header value even if you are connecting not from a mobile network. The technique allowed authorization bypass in [Tele2 Lithuania selfcare](http://mano.tele2.lt). It can be done with curl like:<br/><br/>
 ```
 curl http://identified.address.com --header "X-Identified-Header: spoofed_value"
 ```
