@@ -26,7 +26,7 @@ Poliglotais vadinami tuo pačiu metu kelių formatų failai. Pvz. tas pats speci
 
 Jei atsidarysit [šį paveiksliuką](xss_polyglot.jpg) nieko neatsitiks nes serveris nurodys naršyklei, kad duomenų tipas yra JPEG - prisegs header'į `Content-Type: image/jpeg`. Tačiau, jei serveris to nenurodytų naršyklė bandytų atspėti, kas tai per duomenų tipas ir galėtų nuspręsti, kad tai HTML.
 
-Pabandžiau įkelti šį failą kaip logotipą. Tačiau serveris tvarkingai rodė ji kaip paveiksliuką. Tada nurodžiau siųsti šį **jpg** failą, tačiau pamodifikavau užklausoje  plėtinį į **html**:
+Pabandžiau įkelti šį failą kaip logotipą. Tačiau serveris tvarkingai rodė jį kaip paveiksliuką. Tada nurodžiau siųsti šį **jpg** failą, tačiau pamodifikavau užklausoje  plėtinį į **html**:
 ```
 Content-Disposition: form-data; name="logo"; filename="xss_polyglot.html"
 Content-Type: image/jpeg
