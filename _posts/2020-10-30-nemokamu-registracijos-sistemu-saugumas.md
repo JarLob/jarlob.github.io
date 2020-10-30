@@ -38,7 +38,7 @@ Serveris priėmė, pervadino ir patalpino jį [https://restreg.lt/out/media/9523
 
 Taigi turim galimybė įkelti savo HTML kodą į serverį, tačiau vartotojas taip paprastai ten nenuklystų. Kaip galima būtų tuo pasinaudoti? Truputis socialinės inžinerijos - tokią nuorodą galima išsiųsti phishing laiške registruotos įmonės darbuotojui. Nuoroda yra į `https://restreg.lt/...` ir tikimybė, kad jis ar ji ją atsidarys ženkliai padidėja. Kitu atveju to galėtų užtekti pasiekti lankytojų duomenis, tačiau Restreg.lt reikalauja suvesti kodą suteiktą pirmos registracijos metu. Tai yra gerai, bet kadangi piktavaliai gali pilnai kontroliuoti įkeltą HTML failą, galima būtų sukurti gražų prašymą įvesti šį slaptą kodą, nes jis turi būti sugeneruotas iš naujo. Taip, tai Socialinė Inžinerija, bet Restreg.lt prašo kodo, looks legit?
 
-Kaip tai galima būtu ištaisyti?
+Kaip tai galima būtų ištaisyti?
 - Logotipo failo plėtinys turi būti tikrinamas serveryje.
 - Visi failų iš `out/media` aplanko `Content-Type:` galėtų būti "nurodomas" kaip paveiksliuko.
 - Vartotojų sąrašo eksporto rezultatas galėtų būti siunčiamas tik į registruotą pašto adresą (kurio negalima keisti be administratoriaus patvirtinimo).
