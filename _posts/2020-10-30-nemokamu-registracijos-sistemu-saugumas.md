@@ -8,7 +8,7 @@ permalink:  /lt/blog/nemokamu-registracijos-sistemu-saugumas
 ---
 Šiandien išėjo 15min straipsnis ["Žmonės suskubo padėti COVID-19 smūgį patyrusioms kavinėms ir barams: kuria sistemas nemokamai"](https://www.15min.lt/verslas/naujiena/bendroves/zmones-suskubo-padeti-covid-19-smugi-patyrusioms-kavinems-ir-barams-kuria-sistemas-nemokamai-663-1399998). Iniciatyva išties šauni, tik kiek keista kad abi išvardintos ir kitos man žinomos "nemokamos" sistemos nėra atviro kodo. [Restreg.lt](https://restreg.lt) kūrėjo Facebook'e išplatintas "manifestas" skelbia, kad *"Restreg.lt sistemoje nėra reklamų , 3-iųjų šalių programų, socialinių tinklų sekimo programų"*.
 
-![Restreg manifestas](restreg_fb.png)
+![Restreg manifestas](restreg_fb.PNG)
 
 Ir iš tiesų, kita man žinoma sistema [Covisit.lt](https://covisit.lt) siunčia įtartinai daug telemetrijos į Google serverius. Kavinių ir barų lankymosi informacija, konkrečių vartotojų lankymosi pomėgiai galėtų būti vertinga prekė.
 
