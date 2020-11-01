@@ -3,10 +3,10 @@ layout:     post
 title:      "Nemokamų registracijos sistemų saugumas"
 date:       2020-10-30 17:00:00
 categories: HackAndTell Covid19
-cover:      
+cover:      restreg.png
 permalink:  /lt/blog/nemokamu-registracijos-sistemu-saugumas
 ---
-Šiandien išėjo 15min straipsnis ["Žmonės suskubo padėti COVID-19 smūgį patyrusioms kavinėms ir barams: kuria sistemas nemokamai"](https://www.15min.lt/verslas/naujiena/bendroves/zmones-suskubo-padeti-covid-19-smugi-patyrusioms-kavinems-ir-barams-kuria-sistemas-nemokamai-663-1399998). Iniciatyva išties šauni, tik kiek keista kad abi išvardintos ir kitos man žinomos "nemokamos" sistemos nėra atviro kodo. [Restreg.lt](https://restreg.lt) kūrėjo Facebook'e išplatintas "manifestas" skelbia, kad *"Restreg.lt sistemoje nėra reklamų , 3-iųjų šalių programų, socialinių tinklų sekimo programų"*.
+Šiandien išėjo 15min straipsnis ["Žmonės suskubo padėti COVID-19 smūgį patyrusioms kavinėms ir barams: kuria sistemas nemokamai"](https://www.15min.lt/verslas/naujiena/bendroves/zmones-suskubo-padeti-covid-19-smugi-patyrusioms-kavinems-ir-barams-kuria-sistemas-nemokamai-663-1399998). Iniciatyva išties šauni, tik kiek keista, kad abi išvardintos ir kitos man žinomos "nemokamos" sistemos nėra atviro kodo. [Restreg.lt](https://restreg.lt) kūrėjo Facebook'e išplatintas "manifestas" skelbia, kad *"Restreg.lt sistemoje nėra reklamų , 3-iųjų šalių programų, socialinių tinklų sekimo programų"*.
 
 ![Restreg manifestas](restreg_fb.PNG)
 
@@ -24,7 +24,7 @@ Poliglotais vadinami tuo pačiu metu kelių formatų failai. Pvz. tas pats speci
 
 ![XSS polyglot](xss_polyglot.jpg)
 
-Jei atsidarysit [šį paveiksliuką](xss_polyglot.jpg) nieko neatsitiks nes serveris nurodys naršyklei, kad duomenų tipas yra JPEG - prisegs header'į `Content-Type: image/jpeg`. Tačiau, jei serveris to nenurodytų naršyklė bandytų atspėti, kas tai per duomenų tipas ir galėtų nuspręsti, kad tai HTML.
+Jei atsidarysit [šį paveiksliuką](xss_polyglot.jpg) nieko neatsitiks, nes serveris nurodys naršyklei, kad duomenų tipas yra JPEG - prisegs header'į `Content-Type: image/jpeg`. Tačiau, jei serveris to nenurodytų, naršyklė bandytų atspėti kas tai per duomenų tipas ir galėtų nuspręsti, kad tai HTML.
 
 Pabandžiau įkelti šį failą kaip logotipą. Tačiau serveris tvarkingai rodė jį kaip paveiksliuką. Tada nurodžiau siųsti šį **jpg** failą, tačiau pamodifikavau užklausoje  plėtinį į **html**:
 ```
