@@ -40,7 +40,7 @@ Taigi turim galimybė įkelti savo HTML kodą į serverį, tačiau vartotojas ta
 
 Kaip tai galima būtų ištaisyti?
 - Logotipo failo plėtinys turi būti tikrinamas serveryje.
-- Visi failų iš `out/media` aplanko `Content-Type:` galėtų būti "nurodomas" kaip paveiksliuko.
+- Visų failų iš `out/media` aplanko `Content-Type:` galėtų būti "nurodomas" kaip paveiksliuko.
 - Vartotojų sąrašo eksporto rezultatas galėtų būti siunčiamas tik į registruotą pašto adresą (kurio negalima keisti be administratoriaus patvirtinimo).
 
 Chronologija:  
