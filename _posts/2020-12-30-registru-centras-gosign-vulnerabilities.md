@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Registrų centras GoSign app vulnerabilities"
-date:       2020-12-30 12:00:00
+date:       2020-12-30 08:00:00
 categories: HackAndTell
 cover:      gosign_js.png
 permalink:  /en/blog/registru-centras-gosign-vulnerabilities
