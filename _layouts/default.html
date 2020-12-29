@@ -9,7 +9,7 @@
 {% else %}
     <title>{{ site.name }} - {{ page.title }}</title>
 {% endif %}
-    <meta name="description" content="{{ page.excerpt | strip_html }}" />
+    <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
 
     {% if page.cover %}<meta property="og:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />{% endif %}
 
