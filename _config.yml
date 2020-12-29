@@ -7,11 +7,11 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 15
-baseurl: https://jarlob.github.io/
-domain_name: 'https://jarlob.github.io'
+baseurl: https://blog.devsecurity.eu/
+domain_name: 'https://blog.devsecurity.eu'
 google_analytics: 'UA-136416829-1'
 plugins: [jekyll-paginate]
 
 # Details for the RSS feed generator
-url:            'https://jarlob.github.io'
+url:            'https://blog.devsecurity.eu'
 author:         'Jaroslav Lobačevski'
