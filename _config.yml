@@ -9,5 +9,5 @@ paginate: 10
 baseurl: /
 google_analytics: 'UA-136416829-1'
 plugins: [jekyll-paginate]
-url: https://jarlob.github.io
+url: https://jarlob.github.io/
 author: 'Jaroslav Lobačevski'
