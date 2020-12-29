@@ -1,16 +1,13 @@
 name: Jaroslav Lobačevski
 description:
 meta_description: "Jaroslav Lobačevski"
-
-future: true
+future: false
 markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 10
-baseurl: '/'
+baseurl: /
 google_analytics: 'UA-136416829-1'
 plugins: [jekyll-paginate]
-
-# Details for the RSS feed generator
-url:            'https://jarlob.github.io'
-author:         'Jaroslav Lobačevski'
+url: https://jarlob.github.io
+author: 'Jaroslav Lobačevski'
