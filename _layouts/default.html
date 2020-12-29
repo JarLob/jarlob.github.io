@@ -9,7 +9,7 @@
 {% else %}
     <title>{{ site.name }} - {{ page.title }}</title>
 {% endif %}
-    <meta name="description" content="{{ site.meta_description }} {{ page.title }}" />
+    <meta name="description" content="{{ page.excerpt | xml_escape }}" />
 
     {% if page.cover %}<meta property="og:image" content="{{ page.cover }}" />{% endif %}
 
