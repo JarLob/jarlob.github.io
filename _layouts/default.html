@@ -28,7 +28,7 @@
     {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">
-        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; 
+        <a href="{{ site.baseurl | prepend: site.url }}">{{ site.name }}</a> &copy; 
               {{"now" | date: "%Y"}} &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
