@@ -1,7 +1,7 @@
 name: Jaroslav Lobačevski
 description:
 meta_description: "Jaroslav Lobačevski"
-future: false
+future: true
 markdown: kramdown
 highlighter: rouge
 logo: false
