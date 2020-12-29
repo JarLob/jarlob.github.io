@@ -6,8 +6,7 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 10
-baseurl: /
 google_analytics: 'UA-136416829-1'
 plugins: [jekyll-paginate]
-url: https://blog.devsecurity.eu
+url: https://blog.devsecurity.eu/
 author: 'Jaroslav Lobačevski'
