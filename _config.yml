@@ -6,7 +6,7 @@ future: true
 markdown: kramdown
 highlighter: rouge
 logo: false
-paginate: 15
+paginate: 10
 baseurl: https://blog.devsecurity.eu/
 domain_name: 'https://blog.devsecurity.eu'
 google_analytics: 'UA-136416829-1'
