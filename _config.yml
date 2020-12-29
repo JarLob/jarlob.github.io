@@ -7,7 +7,7 @@ markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 10
-baseurl: //
+baseurl: '/ '
 google_analytics: 'UA-136416829-1'
 plugins: [jekyll-paginate]
 
