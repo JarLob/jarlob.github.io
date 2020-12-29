@@ -11,7 +11,7 @@
 {% endif %}
     <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
 
-    {% if page.cover %}<meta property="og:image" content="{{ page.url | prepend: site.url | replace: "//", "" | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />{% endif %}
+    {% if page.cover %}<meta property="og:image" content="{{ page.url | remove_first: "/" | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />{% endif %}
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
