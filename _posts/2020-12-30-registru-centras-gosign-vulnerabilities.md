@@ -6,7 +6,7 @@ categories: HackAndTell
 cover:      gosign_js.png
 permalink:  /en/blog/registru-centras-gosign-vulnerabilities
 ---
-After reading [an article](https://sec-consult.com/blog/detail/deanonymization-of-lithuanian-e-signature-users/) about a remediated information disclosure vulnerability in [GoSign](https://www.elektroninis.lt/paruosti-kompiuteri/nid-1287) - an e-signature desktop application by the State Enterprise Centre of Registers of Lithuania (Registrų centras), I became curious if it is not vulnerable to the other attack - DNS rebinding. In this blog post I'll review what I've found and what was fixed.
+After reading [an article](https://sec-consult.com/blog/detail/deanonymization-of-lithuanian-e-signature-users/) about a remediated information disclosure vulnerability in [GoSign](https://www.elektroninis.lt/paruosti-kompiuteri/nid-1287) - an e-signature desktop application by the State Enterprise Centre of Registers of Lithuania (Registrų centras), I became curious whether it is vulnerable to the other attack - DNS rebinding. In this blog post I'll review what I've found and what was fixed.
 
 [GoSign](https://www.elektroninis.lt/bylos/elektroninis_lt/Diegliai/GoSignCore.msi) installs two Windows services: GoSign and GoSignMonitor (installed by default) and GoSignUI tray application (optional feature, not installed by default). Both services start on bootup and run with highest privileges possible - LocalSystem. It doesn't matter if the user has the identity card inserted or not.
 
