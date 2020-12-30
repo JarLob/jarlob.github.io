@@ -548,7 +548,7 @@ margin on the iframe, cause it breaks stuff. */
     padding-bottom: 0;
 }
 
-.no-cover.post {
+.no-cover .post {
     margin-top: 0;
 }
 

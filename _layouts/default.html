@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{'/assets/css/main.css' | relative_url}} " />
 
 </head>
-<body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
+<body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}{% if page.cover == nil %} no-cover{% endif %}">
 
     {{ content }}
     <footer class="site-footer clearfix">
