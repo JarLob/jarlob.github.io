@@ -36,7 +36,7 @@ GoSign is the other installed service that runs a local web server on TCP ports 
 GET  /nexu-info
 POST /rest/certificates
 GET  /rest/certificates
-POST /rest/sign
+POST /rest/sign 
 POST /rest/loadApp
 GET  /diagnostics
 POST /certs
