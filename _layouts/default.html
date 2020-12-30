@@ -11,16 +11,22 @@
 {% endif %}
     <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
 
-    {% if page.cover %}<meta property="og:image" content="{{ page.url | remove_first: "/" | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />{% endif %}
+    {% if page.cover %}
+        {% if site.baseurl != "/" %}
+            <meta property="og:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />
+        {% else %}
+            <meta property="og:image" content="{{ page.url | remove_first: "/" | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />
+        {% endif %}
+    {% endif %}
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{'/assets/css/screen.css' | relative_url}}" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
     <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="{{'/assets/css/main.css' | relative_url}} " />
 
 </head>
 <body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
@@ -28,7 +34,7 @@
     {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">
-        <a href="{{ site.url }}">{{ site.name }}</a> &copy; 
+        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; 
               {{"now" | date: "%Y"}} &bull; All rights reserved.
       </section>
       <section class="poweredby">Made with Jekyll using 
@@ -36,9 +42,9 @@
       </section>
     </footer>
     
-    <script type="text/javascript" src="/assets/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="/assets/js/index.js"></script>
+    <script type="text/javascript" src="{{'/assets/js/jquery-1.11.1.min.js' | relative_url}}"></script>
+    <script type="text/javascript" src="{{'/assets/js/jquery.fitvids.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{'/assets/js/index.js' | relative_url }}"></script>
 
     <!-- Google Analytics Tracking code -->
     <script type="text/javascript">

@@ -7,8 +7,8 @@ post_class: post-template
 
 <header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="{{ site.url }}">Home</a>
-        <a class="subscribe-button icon-feed" href="{{ site.url }}feed.xml">Subscribe</a>
+        <a class="back-button icon-arrow-left" href="{{'/' | relative_url }}">Home</a>
+        <a class="subscribe-button icon-feed" href="{{'feed.xml' | relative_url }}">Subscribe</a>
     </nav>
 </header>
 
@@ -19,7 +19,6 @@ post_class: post-template
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
-                <img src="https://www.devsecurity.eu/icons{{ page.permalink }}.svg" height=15 width=15>
                 <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
                 {% if page.author %}
                     {{ page.author }}
@@ -34,7 +33,7 @@ post_class: post-template
         </header>
 
 <!--         <header class="post-header">
-            <a id="blog-logo" href="{{site.url}}">
+            <a id="blog-logo" href="{{'/' | relative_url }}">
                 {% if site.logo %}
                     <img src="{{site.logo}}" alt="{{ site.name }}" />
                 {% else %}
@@ -61,7 +60,7 @@ post_class: post-template
             <h5>Archive</h5>
             <ul>
                 {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
+                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
                 {% endfor %}
             </ul>
         </section>
@@ -71,7 +70,7 @@ post_class: post-template
             <!-- If we want to display author's name and bio -->
             {% if page.author %}
                 <figure class="author-image">
-                    <a class="img" href="{{ site.url }}" style="background-image: url(/assets/images/{{ page.profileimage }})">
+                    <a class="img" href="{{'/' | relative_url }}" style="background-image: url({{'/assets/images/profile.png' | relative_url}})">
                     <span class="hidden">{{page.author}}'s Picture</span></a>
                 </figure>
                 <section class="author">
@@ -80,7 +79,7 @@ post_class: post-template
                 </section>
             {% elsif site.author %}
                 <figure class="author-image">
-                    <a class="img" href="{{ site.url }}" style="background-image: url(/assets/images/profile.png)">
+                    <a class="img" href="{{'/' | relative_url }}" style="background-image: url({{'/assets/images/profile.png' | relative_url}})">
                     <span class="hidden">{{site.author}}'s Picture</span></a>
                 </figure>
                 <section class="author">

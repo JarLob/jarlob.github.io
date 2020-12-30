@@ -8,5 +8,6 @@ logo: false
 paginate: 10
 google_analytics: 'UA-136416829-1'
 plugins: [jekyll-paginate]
-url: https://blog.devsecurity.eu/
+url: https://blog.devsecurity.eu
+baseurl: "/"
 author: 'Jaroslav Lobačevski'
