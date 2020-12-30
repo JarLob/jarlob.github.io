@@ -542,6 +542,16 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 /* Hide when there's no cover image or on page2+ */
+
+.no-cover .main-nav {
+    margin: 0 0 0 0;
+    padding-bottom: 0;
+}
+
+.no-cover.post {
+    margin-top: 0;
+}
+
 .no-cover .scroll-down,
 .no-cover.main-header:after,
 .archive-template .scroll-down,
