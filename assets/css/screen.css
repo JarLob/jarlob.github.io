@@ -679,7 +679,7 @@ margin on the iframe, cause it breaks stuff. */
     color: #fff;
 }
 
-.page-description {
+.page-description a {
     margin: 0;
     font-size: 2rem;
     line-height: 1.5em;
