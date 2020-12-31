@@ -51,7 +51,13 @@ cover: assets/images/logo.jpg
             <a href="{{site.about | relative_url}}">{{ site.author }}</a>
             {% endif %}
             {% if post.categories.size > 0 %}
-            {{ post.categories | array_to_sentence_string | prepend: 'on ' }}
+                {% assign tags_array = "" | split: ',' %}
+                {% for tag in post.categories %}
+                    {% assign hash = tag | slugify %}
+                    {% assign tag_link = '<a href="' | append: '/tags/#' | append: hash | append: '">' | append: tag | append: '</a>' %}
+                    {% assign tags_array = tags_array | push: tag_link %}
+                {% endfor %}
+                {{ tags_array | join: ' and ' | prepend: 'on '}}
             {% endif %}
             <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
                 {{ post.date | date_to_string }}
