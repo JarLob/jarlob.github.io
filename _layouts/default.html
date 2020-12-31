@@ -12,13 +12,20 @@
     <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines }}" />
 
     {% if page.cover %}
-        {% if site.baseurl != "/" %}
-            <meta property="og:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />
-            <meta name="twitter:image" content="{{ page.url | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}">
-        {% else %}
-            <meta property="og:image" content="{{ page.url | remove_first: "/" | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}" />
-            <meta name="twitter:image" content="{{ page.url | remove_first: "/" | prepend: site.baseurl | prepend: site.url | split: '/' | pop | join: '/' | append: '/' | append: page.cover }}">
+        {% assign page_url_array = page.url | split: '/' %}
+
+        {% if page_url_array.size > 0 %}
+            {% assign page_url_array = page_url_array | pop %}
         {% endif %}
+
+        {% if site.baseurl != "/" %}
+            {% assign og_image = page_url_array | join: '/' | prepend: site.baseurl | prepend: site.url | append: '/' | append: page.cover %}
+        {% else %}
+            {% assign og_image = page_url_array | join: '/' | prepend: site.url | append: '/' | append: page.cover %}
+        {% endif %}
+
+        <meta property="og:image" content="{{ og_image }}">
+        <meta name="twitter:image" content="{{ og_image }}">
     {% endif %}
 
     <meta name="HandheldFriendly" content="True" />
