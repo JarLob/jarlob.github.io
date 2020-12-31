@@ -2,7 +2,6 @@
 layout: default
 title: Home
 cover: assets/images/logo.jpg
-about: 'about.html'
 ---
 
 <header class="main-header post-head{% if page.cover %}" style="background-image: url({{ page.cover | relative_url }}) {%else%}no-cover{% endif %}">
@@ -19,7 +18,7 @@ about: 'about.html'
             <h1 class="page-title">{{ site.name }}</h1>
             <h2 class="page-description">
                 {% if site.description %} {{ site.description }}. {% endif %}
-                {% if page.about %} <a href='{{page.about | relative_url}}'> About me </a> {% endif %}
+                {% if site.about %} <a href='{{site.about | relative_url}}'> About me </a> {% endif %}
             </h2>
         </div>
     </div>
@@ -49,7 +48,7 @@ about: 'about.html'
             {{ post.author }}
             {% elsif site.author %}
             <img class="author-thumb" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
-            {{ site.author }}
+            <a href="{{site.about | relative_url}}">{{ site.author }}</a>
             {% endif %}
             {% if post.categories.size > 0 %}
             {{ post.categories | array_to_sentence_string | prepend: 'on ' }}

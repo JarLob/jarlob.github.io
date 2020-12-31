@@ -23,7 +23,7 @@ post_class: post-template
                 {% if page.author %}
                     {{ page.author }}
                 {% elsif site.author %}
-                    {{ site.author }}
+                    <a href="{{site.about | relative_url}}">{{ site.author }}</a>
                 {% endif %}
                 {% if page.categories.size > 0 %}
                     {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
