@@ -26,7 +26,6 @@ post_class: post-template
                     <img class="author-thumb" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
                     <a href="{{site.about | relative_url}}">{{ site.author }}</a>
                 {% endif %}
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
                 {% if page.categories.size > 0 %}
                     {% assign tags_array = "" | split: ',' %}
                     {% for tag in page.categories %}
@@ -36,6 +35,7 @@ post_class: post-template
                     {% endfor %}
                     {{ tags_array | join: ' and ' | prepend: 'on '}}
                 {% endif %}
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
                 <span class="reading-time">
                     {% assign words = page.content | strip_html | number_of_words %}
                     {% if words <= site.words_per_minute %}
