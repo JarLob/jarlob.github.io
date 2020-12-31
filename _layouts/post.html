@@ -19,12 +19,14 @@ post_class: post-template
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
-                {% if page.author %}
-                    {{ page.author }}
+                {% if post.author %}
+                    <img class="author-thumb" src="{{'/assets/images/' | relative_url}}{{ post.profileimage }}" alt="Author's profile picture" nopin="nopin" />
+                    {{ post.author }}
                 {% elsif site.author %}
+                    <img class="author-thumb" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
                     <a href="{{site.about | relative_url}}">{{ site.author }}</a>
                 {% endif %}
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
                 {% if page.categories.size > 0 %}
                     {% assign tags_array = "" | split: ',' %}
                     {% for tag in page.categories %}
@@ -34,6 +36,14 @@ post_class: post-template
                     {% endfor %}
                     {{ tags_array | join: ' and ' | prepend: 'on '}}
                 {% endif %}
+                <span class="reading-time">
+                    {% assign words = page.content | strip_html | number_of_words %}
+                    {% if words <= site.words_per_minute %}
+                        1 min read
+                    {% else %}
+                        {{ words | divided_by: site.words_per_minute }} min read
+                    {% endif %}
+                </span>
             </section>
             <br>
         </header>
