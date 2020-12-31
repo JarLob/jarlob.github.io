@@ -37,11 +37,7 @@ post_class: post-template
                 {% endif %}
                 <span class="reading-time">
                     {% assign words = page.content | strip_html | number_of_words %}
-                    {% if words <= site.words_per_minute %}
-                        1 min read
-                    {% else %}
-                        {{ words | divided_by: site.words_per_minute }} min read
-                    {% endif %}
+                    {{ words | divided_by: site.words_per_minute | plus: 1}} min read
                 </span>
                 <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
             </section>
