@@ -29,7 +29,7 @@ post_class: post-template
                     {% assign tags_array = "" | split: ',' %}
                     {% for tag in page.categories %}
                         {% assign hash = tag | slugify %}
-                        {% assign tag_link = '<a href="' | append: '/tags/#' | append: hash | append: '">' | append: tag | append: '</a>' %}
+                        {% assign tag_link = '<a href="' | append: '/tags#' | append: hash | append: '">' | append: tag | append: '</a>' %}
                         {% assign tags_array = tags_array | push: tag_link %}
                     {% endfor %}
                     {{ tags_array | join: ' and ' | prepend: 'on '}}
