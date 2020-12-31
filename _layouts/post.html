@@ -35,7 +35,6 @@ post_class: post-template
                     {% endfor %}
                     {{ tags_array | join: ' and ' | prepend: 'on '}}
                 {% endif %}
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }} </time>
                 <span class="reading-time">
                     {% assign words = page.content | strip_html | number_of_words %}
                     {% if words <= site.words_per_minute %}
@@ -44,6 +43,7 @@ post_class: post-template
                         {{ words | divided_by: site.words_per_minute }} min read
                     {% endif %}
                 </span>
+                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
             </section>
             <br>
         </header>

@@ -62,9 +62,6 @@ cover: assets/images/logo.jpg
                 {% endfor %}
                 {{ tags_array | join: ' and ' | prepend: 'on '}}
             {% endif %}
-            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
-                {{ post.date | date_to_string }}
-            </time>
             <span class="reading-time">
                 {% assign words = post.content | strip_html | number_of_words %}
                 {% if words <= site.words_per_minute %}
@@ -73,6 +70,9 @@ cover: assets/images/logo.jpg
                     {{ words | divided_by: site.words_per_minute }} min read
                 {% endif %}
             </span>
+            <time class="post-date" datetime="{{ post.date | date:"%Y-%m-%d" }}">
+                {{ post.date | date_to_string }}
+            </time>
         </footer>
     </article>
 

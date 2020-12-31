@@ -805,9 +805,7 @@ body:not(.post-template) .post-title {
 }
 
 .post-date {
-    display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
+    display: block;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
@@ -815,11 +813,10 @@ body:not(.post-template) .post-title {
 
 .reading-time {
     display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
     text-transform: uppercase;
     font-size: 1.3rem;
     white-space: nowrap;
+    float: right;
 }
 
 .user-image {
@@ -1567,10 +1564,6 @@ img.align-left {
         margin-right: 16px;
         padding-bottom: 2rem;
         line-height: 1.65em;
-    }
-
-    .post-date {
-        display: none;
     }
 
     .post-template .post-header {
