@@ -42,15 +42,15 @@
 
     {{ content }}
     <footer class="site-footer clearfix">
-      <section class="copyright">
-        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; 
-              {{"now" | date: "%Y"}} &bull; All rights reserved.
-      </section>
-      <section class="poweredby">Made with Jekyll using 
-        <a href="http://github.com/rosario/kasper">Kasper theme</a>
-      </section>
+        <section class="copyright">
+            <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy;
+            {{"now" | date: "%Y"}} &bull; All rights reserved.
+        </section>
+        <section class="poweredby">Made with Jekyll using
+            <a href="http://github.com/rosario/kasper">Kasper theme</a>
+        </section>
     </footer>
-    
+
     <script type="text/javascript" src="{{'/assets/js/jquery-1.11.1.min.js' | relative_url}}"></script>
     <script type="text/javascript" src="{{'/assets/js/jquery.fitvids.js' | relative_url }}"></script>
     <script type="text/javascript" src="{{'/assets/js/index.js' | relative_url }}"></script>
@@ -68,6 +68,9 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
 
-    </script>   
+    </script>
+
+    {% include cookie-consent.html %}
+
 </body>
 </html>
