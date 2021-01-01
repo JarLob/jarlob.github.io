@@ -3,7 +3,7 @@ layout: page
 title: About me 
 ---
 
-I have started as desktop and backend C++/C# developer. While one part of me enjoyed creating programs, my other passion always was finding cracks and breaking things. After some time I've moved into Information Security field where I feel I found a balance: I enjoy writing security tools and performing technical security assessments. In my free time I like researching security of third party products (both closed and open source).  
+I have started as a desktop and backend C++/C# developer. While one part of me enjoyed creating programs, my other passion always was finding cracks and breaking things. After some time I've moved into the Information Security field where I feel I found a balance: I enjoy writing security tools and performing technical security assessments. In my free time I like researching security of third party products (both closed and open source).  
 
 Open source projects I am or was actively involved:  
 
