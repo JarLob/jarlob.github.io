@@ -9,11 +9,11 @@ permalink:  /lt/blog/kodel-hakeriai-nemoka-baudu
 *Straipsnis pirmą kartą publikuotas 2019-02-20 [Linkedin](https://www.linkedin.com/pulse/kod%C4%97l-hakeriai-nemoka-baud%C5%B3-jaroslav-loba%C4%8Devski/).*  
 Manau [https://tvarkaumiesta.lt](https://tvarkaumiesta.lt) yra puikus puslapis suteikiantis galimybę teikti pasiūlymus miesto tvarkymo klausimais arba įskųsti kokį pažeidėją ;) Teko ir pačiam pasinaudoti juo. Mano dėmesį patraukė keturios ikonos po paties sukurtu pranešimu kurių iš pradžių net nepastebėjau:
 
-![Pranešimas](tm_icons.png)
+[![Pranešimas](tm_icons.png "Pranešimas")](tm_icons.png)
 
 Antra ikona buvo neaktyvi. Tai pastūmėjo manę patikrinti ar tai kas uždrausta iš naršyklės taip pat neveikia jei kreipčiausi į serverį tiesiogiai. Susikūriau naują anoniminį pranešimą testavimui ir supratau, kad tokio tipo pranešimai išviso neturi redagavimo mygtukų. Teko susikurti antrą pranešimą jau savo vardu, paspausti trinti ir pagauti naršyklės siunčiamą užklausą serveriui:
 
-![Request](tm_request.png)
+[![Request](tm_request.png "Request")](tm_request.png)
 
 Serveriui buvo siunčiamas problem_id numeris, kuris matomas kiekvienam pranešimui adresų juostoje. Antras parametras problem_oid - ilga skaičių ir raidžių seka. Įdomu ar galėčiau gauti jį anoniminiams pranešimams? Jį radau kiekvieno pranešimo HTML kode. Pabandžiau išsiųsti užklausą su prieš tai paties sukurto anoniminio pranešimo problem_id ir problem_oid. Pavyko - pranešimas dingo! Pabandžiau neprisijungęs (be cookies) ištrinti savo ne anoniminį pranešimą - ir vėl sėkmė!
 

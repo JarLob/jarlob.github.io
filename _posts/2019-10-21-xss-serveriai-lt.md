@@ -19,7 +19,7 @@ Pavyzdžiui, XSS leidžia gauti prieigą prie vartotojo web sessijos ir vykdyti 
 
 Serveriai.lt sukūrė patogų viešą įrankį, kuris leidžia gauti viešą informaciją apie domeną:
 
-![WHOIS įrankis](xss-serveriai-whois.jpg)
+[![WHOIS įrankis](xss-serveriai-whois.jpg "WHOIS įrankis")](xss-serveriai-whois.jpg)
 
 [Plačiau apie WHOIS](https://en.wikipedia.org/wiki/WHOIS)
 
@@ -27,11 +27,11 @@ Kartu su WHOIS informacija, įrankis leidžia matyti patalpinto serverio IP adre
 
 Tačiau HTTP headeriai buvo atvaizduojami nesaugiai: bet kokia atsakyme pateikta reikšmė buvo tiesiogiai atvaizduojama puslapyje. Todėl sukūrus testinį adresą ir įdėjus į jo atsakymą specialų HTTP headerį su paveiksliuko kodu buvo gautas štai toks rezultatas:
 
-![HTTP headers](xss-serveriai-http-headers.jpg)
+[![HTTP headers](xss-serveriai-http-headers.jpg "HTTP headers")](xss-serveriai-http-headers.jpg)
 
 Pakeitus paveiksliuko kodą į JavaScript, vartotojo naršyklėje būtų įvykdytas XSS kodas:
 
-![Alert popup](xss-serveriai-alert-popup.jpg)
+[![Alert popup](xss-serveriai-alert-popup.jpg "Alert popup")](xss-serveriai-alert-popup.jpg)
 
 Tereikėtų sulaukti, kol koks nors smalsus serveriai.lt darbuotojas su `*.serveriai.lt` Cookie patirkintų jūsų domeną.
 

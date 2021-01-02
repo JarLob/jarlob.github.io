@@ -14,7 +14,7 @@ Visų pirma noriu pasakyti, kad programinio kodo atvirumas nedaro puslapio nei m
 
 Pasižiūrėjus į pataisymą pasidarė aišku kam tas antras parametras `oid`. TM turi savo registruotų pranešimų duomenų bazę, bet tuo pačiu metu dirba ir su vidine savivaldybės dokumentų valdymo sistema Avilys. `Oid` yra dokumento numeris Avilio sistemoje. Programuotojai pataisė skylę pridėję pamirštą patikrinimą ar pranešimą norintis ištrinti vartotojas yra jo kūrėjas:
 
-![Pranešimas](tmfix.png)
+[![Pranešimas](tmfix.png "Pranešimas")](tmfix.png)
 
 Patikrinimas buvo standartinis, toks pats kaip visur kitur programoje. Tik viena problema - buvo tikrinamas TM pranešimo `id`, bet ne Avilio `oid`. Vartotojas galėjo sukurti savo pranešimą ir nusiųsti modifikuotą užklausą ištrinti savo `id`, bet svetimą `oid`. Tai paliktų svetimą pranešimą TM, bet ištrintų jį savivaldybėje. Ši loginė patikrinimo klaida egzistavo visoms operacijoms, ne tik trinimui. Mano nuomone `oid` išvis neturėtų būti rodomas vartotojui.
 
@@ -58,7 +58,7 @@ atvedė prie [privataus kriptografinio rakto](https://tvarkaumiesta.lt/viisp/key
 
 Atviras kodas tai ir atvira pakeitimų istorija. Vartotojų nuotraukoms ir kitiems dokumentams saugoti TM naudoja [Minio](https://www.minio.io/). 2017-ųjų spalį programuotojas [pašalino iš kodo prisijungimo prie Minio kodus](https://bitbucket.org/emiestas/tvarkau-miesta_moved/diff/class/myFunctions.php?diff2=c0cffd37c077&amp;at=map):
 
-![MinioKeys](miniokeys.png)
+[![MinioKeys](miniokeys.png "MinioKeys")](miniokeys.png)
 
 bet patingėjo juos pakeisti, nes... niekas gi nesužinos. Bet blogiausia pasirodė tai, kad jų net nereikėjo žinoti - bet kas galėjo atsidaryti naršyklėje pvz. [https://minio.vilnius.lt/minio/answers.vilnius/](https://minio.vilnius.lt/minio/answers.vilnius/) ir parsisiųsti laiškus su potencialiai asmenine informacija.
 
@@ -107,7 +107,7 @@ else if($_POST['type']=='add'){
 
 Gavau Avilio prisijungimo duomenis visiems miestams, bet pasirodė, kad tik vienintelė Vilniaus savivaldybė laiko savo vidinę dokumentų valdymo sistemą [prieinamą visam pasauliui](https://ivs.vilnius.lt/) (kad ir apsaugotą slaptažodžiu):
 
-![Avilys](avilys.png)
+[![Avilys](avilys.png "Avilys")](avilys.png)
 
 Atskiro paminėjimo vertas vartotojų slaptažodžių saugojimas duomenų bazėje. TM naudoja MD5 su druska. Pagrindinė problema yra tai, kad MD5 "nulaužimo" greitis perrinkimo būdu yra mažiausiai 25 tūkstančių kartų didesnis, nei moderni saugi alternatyva. Šiuo atveju kuo greičiau, tuo blogiau, nes galimų slaptažodžių perrinkimas turi būti kuo lėtesnis. Šiuolaikinis kompiuteris su viena grafine plokšte nulaužtų sudėtingą aštuonių įvairiausių simbolių slaptažodį per kelias dienas. O yra kompiuterių ir su [aštuoniom grafinėm plokštėm](https://gist.github.com/epixoip/a83d38f412b4737e99bbef804a270c40).
 

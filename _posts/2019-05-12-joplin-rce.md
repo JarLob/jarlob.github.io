@@ -19,7 +19,7 @@ location.reload();">
 ```
 and successfully popped a calc:
 
-![Calculator in Joplin](joplin.png)
+[![Calculator in Joplin](joplin.png "Calculator in Joplin")](joplin.png)
 
 The malicious document could have been delivered to the victim machine through synchronization. Joplin supports synchronization with WebDAV providers, network shares or cloud storages like OneDrive (the attacker would need to compromise OneDrive credentials first in that case).
 

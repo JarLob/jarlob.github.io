@@ -20,10 +20,10 @@ Tam, kad nepažeisčiau kitų vartotojų privatumo kaip *Proof of Concept* prisi
 
 Nagrinėdamas savitarnos svetainę tam, kad įvertinčiau pažeidžiamumo įtaką aptikau automatinio prisijungimo nustatymą [senoje Tele2 svetainėje](https://old-mano.tele2.lt/pagrindinis) (Bendrovė neseniai pristatė naują savitarnos svetainę). Į ją galima patekti per [nuorodą](https://old-mano.tele2.lt/pagrindinis) arba naujoje svetainėje paspaudus `Grįžti į senąją savitarną`. Tada - `Mano paskyra -> Kiti prisijungimo būdai`:  
 
-![Kiti prisijungimo būdai](tele2-1.png)
+[![Kiti prisijungimo būdai](tele2-1.png "Kiti prisijungimo būdai")](tele2-1.png)
 
 Įdomu tai, kad paspaudus išjungti yra parodomas sekantis pranėšimas:  
-![Tele2 savitarnos perspėjimas](tele2-2.png)
+[![Tele2 savitarnos perspėjimas](tele2-2.png "Tele2 savitarnos perspėjimas")](tele2-2.png)
 
 Dauguma vartotojų net nesusimąsto, kai dalinasi internetu, kad tai galėtų plačiai atverti duris į jų savitarną visiems besijungiantiems. Taip pat neprisimenu kad kada nors bučiau keitęs šį nustatymą. Drįsčiau teigti, kad jis įjungtas visiems pagal nutylėjimą ir dauguma vartotoju nėra susipažinę su susijusiais pavojais.
 
@@ -32,7 +32,7 @@ Tai, kartu su galimybe suklastoti vartotojo identifikatorių, leido prisijungti 
 Apskritai paėmus, nors [Tele2 neigia spragos rimtumą (16 min. 43 sec.)](https://www.ziniuradijas.lt/laidos/skaitmeniniai-horizontai/kaip-m-transportas-lt-programeles-leido-atskleisti-naudotoju-banko-korteliu-informacija) *(Užtektų tiesiog pripažinti, kad saugumo klaida buvo greitai ištaisyta, o vidinis patikrinimas nenustatė, kad kas nors tuo pasinaudojo. Juk įmonė privalėjo ne tik ištaisyti spragą, bet ir patikrinti įrašus ieškodama galimų panaudojimo pėdsakų.)* mano patirtis su Tele2 Lietuva išlieka teigiama. Jie parodė, kad vartotojų saugumas jiems yra svarbus ir gana operatyviai ištaisė klaidas.  Deja, bandymai *post factum* sumenkinti saugumo problemą neprisideda prie atsakingo atskleidimo praktikos ir neskatina saugumo tyrinėtojų pirma pranešti įmonei apie atrastą spragą prieš atskleidžiant tai viešai.
 
 P.S. Labas.lt taip pat leidžia prisijungti prie [savaitarnos](http://mano.labas.lt) per mobilųjį ryšį be slaptažodžio jeigu suvedamas nešifruotas adresas `http://`. Skirtingai nuo Tele2 galimybės apsimesti kitu vartotoju nebuvo. Tačiau nebuvo ir galimybės išjungti šio funkcionalumo ir jis taip pat buvo įjungtas visiems vartotojams iš eilės be perspėjimo apie galimas grėsmes. Po pranešimo Bitė įdiegė galimybę tai valdyti savitarnos nustatymuose ir išjungė automatinį atpažinimą esamiems vartotojams. Beje panašu, kad įsivėlė klaida ir įjungti šio funkcionalumo nepavyksta :)  
-![Labas savitarnos perspėjimas](labas-savitarna.png)
+[![Labas savitarnos perspėjimas](labas-savitarna.png "Labas savitarnos perspėjimas")](labas-savitarna.png)
 
 ## Chronologija
 2020-02-29 - Išsiųstas pranešimas apie spragą Tele2.lt  

@@ -38,11 +38,11 @@ Savo sistemoje IV naudoja Apache modulį “mod_security”, kuris yra atsakinga
 
 Modulis sukurtas apsaugoti PHP programas su žinomomis spragomis nuo įsilaužimo, tačiau ir jis pats gali būti pažeidžiamas. Paaiškėjo, kad specialiai suformuota užklausa gali priversti serverį grąžinti PHP failo turinį:
 
-![POST request](serveriailt-post-request.jpg)
+[![POST request](serveriailt-post-request.jpg "POST request")](serveriailt-post-request.jpg)
 
 Wordpress:
 
-![Wordpress](serveriailt-burp-wordpresst.jpg)
+[![Wordpress](serveriailt-burp-wordpresst.jpg "Wordpress")](serveriailt-burp-wordpresst.jpg)
 
 Tokio tipo kritinė saugumo spraga programišių žargone kartais vadinama “game over”, nes leidžia visiškai užvaldyti sistemą. Atskleidus PHP turinį galima pamatyti slaptažodžius ir gauti pilną prieigą prie duomenų bazės. Kai kuriais atvejais tai suteiktų galimybę net įkelti savo PHP kodą į serverį ir toliau pasiekti vidinę infrastruktūrą (lateral movement).
 
@@ -52,7 +52,7 @@ Ne visos PHP programos patikrinimo metu buvo pažeidžiamos. Pavyzdžiui, phpBB 
 
 [https://github.com/phpbb/phpbb/blob/master/phpBB/.htaccess](https://github.com/phpbb/phpbb/blob/master/phpBB/.htaccess)
 
-![htaccess](serveriailt-htaccess.jpg)
+[![htaccess](serveriailt-htaccess.jpg "htaccess")](serveriailt-htaccess.jpg)
   
 ## Atskleidimas
 

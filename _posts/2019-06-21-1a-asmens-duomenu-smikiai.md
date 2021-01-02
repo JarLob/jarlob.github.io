@@ -20,7 +20,7 @@ Vienas iš garsiausiai nuskambėjusių atvejų Lietuvoje, kai įmonė buvo patra
 
 Užsisakius prekes 1A parduotuvėje pirkėjas gauna užsakymo sekimo nuorodą:
 
-![1A užsakymo nuoroda](1A_nuoroda.jpg)
+[![1A užsakymo nuoroda](1A_nuoroda.jpg "1A užsakymo nuoroda")](1A_nuoroda.jpg)
 
 [https://www.1a.lt/order/progress/order_number/123456/token/XXXXXXXXXXXXXXXX](https://www.1a.lt/order/progress/order_number/123456/token/XXXXXXXXXXXXXXXX)
 
@@ -38,7 +38,7 @@ Pavyzdžiui:
 
 [https://www.1a.lt/order/progress/order_number/435483/token/0](https://www.1a.lt/order/progress/order_number/435483/token/0)
 
-![1A užsakymas](1A_uzsakymas.jpg)
+[![1A užsakymas](1A_uzsakymas.jpg "1A užsakymas")](1A_uzsakymas.jpg)
 
 Kažkas užsisakė svarstykles Esperanza EKS003 už 6,98 eurus su pristatymu už 1,99 eur į Vilniaus OMNIVA paštomatą Naugarduko gatvėje. Ir kas gi čia užsakovas?
 
@@ -46,13 +46,13 @@ Kažkas užsisakė svarstykles Esperanza EKS003 už 6,98 eurus su pristatymu už
 
 Mes gerbiame Agnės privatumą ir neviešinsime jos pavardės:
 
-![OMNIVA gavėjas](1A_omniva.jpg)
+[![OMNIVA gavėjas](1A_omniva.jpg "OMNIVA gavėjas")](1A_omniva.jpg)
 
 Agnė atsiėmė siuntą 09.04.2019 12:50. Labai operatyviai! "Dėkojame, jog pasirinkote www.1a.lt! Gero naudojimo!"
 
 Atsisiųsti visų užsakymų duombazę nėra sudėtinga:
 
-![Visi 1A užsakymai](1A_visi_uzsakymai.jpg)
+[![Visi 1A užsakymai](1A_visi_uzsakymai.jpg "Visi 1A užsakymai")](1A_visi_uzsakymai.jpg)
 
 
 

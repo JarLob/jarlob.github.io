@@ -12,23 +12,23 @@ I find deserialization vulnerabilities somewhat special and beautiful. The fact 
 
 First I needed an executable for testing. So I've created an empty C# project in Visual Studio and added a string resource. It is available on [GitHub](https://github.com/JarLob/EvilResx). For PoC payload generation I've used [ysoserial.net](https://github.com/pwntester/ysoserial.net) by Alvaro Muñoz.
 
-![Payload](resx.png)
+[![Payload](resx.png "Payload")](resx.png)
 
 After the compilation I've got the [EvilResx.exe](EvilResx.exe) for testing. There are differences in resource handling between decompilers. ILSpy for example doesn't deserialize resources:
 
-![ILSpy resource view](ilspy_resource.png){: .align-left}
+[![ILSpy resource view](ilspy_resource.png "ILSpy resource view")](ilspy_resource.png){: .align-left}
 
 Telerik JustDecompile gives a warning before opening a resource file instead:
 
-![JustDecompile warning](justdecompile_resource_warning.png){: .align-left}
+[![JustDecompile warning](justdecompile_resource_warning.png "JustDecompile warning")](justdecompile_resource_warning.png){: .align-left}
 
 When I opened [dnSpy](https://github.com/0xd4d/dnSpy) and expanded resources it didn't warn me, but a calculator popped up:
 
-![dnSpy calc popped](dnspy_resource.png){: .align-left}
+[![dnSpy calc popped](dnspy_resource.png "dnSpy calc popped")](dnspy_resource.png){: .align-left}
 
 The developer of dnSpy pointed out there is a setting I wasn't aware of in options dialog with a note that it is unsafe:
 
-![dnSpy options](dnspy_options.png){: .align-left}
+[![dnSpy options](dnspy_options.png "dnSpy options")](dnspy_options.png){: .align-left}
 
 But for some reason the setting was ON by default. He decided to remove the setting completely and immediately released a new version with the fix 5.0.11.
 

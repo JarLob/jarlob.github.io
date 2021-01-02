@@ -31,4 +31,4 @@ It is possible you'll be able to see the injected headers because the provider c
 curl http://identified.address.com --header "X-Identified-Header: spoofed_value"
 ```
 or by setting a Web Proxy of your choice to inject all request with your header. For example in Burp:
-![Burp match and replace header setting](burp_header_inject.png)
+[![Burp match and replace header setting](burp_header_inject.png "Burp match and replace header setting")](burp_header_inject.png)

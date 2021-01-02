@@ -10,17 +10,17 @@ After reading [an article](https://sec-consult.com/blog/detail/deanonymization-o
 
 [GoSign](https://www.elektroninis.lt/bylos/elektroninis_lt/Diegliai/GoSignCore.msi) installs two Windows services: GoSign and GoSignMonitor (installed by default) and GoSignUI tray application (optional feature, not installed by default). Both services start on bootup and run with highest privileges possible - LocalSystem. It doesn't matter if the user has the identity card inserted or not.
 
-![Services](gosign_sc.png)
+[![Services](gosign_sc.png "Services")](gosign_sc.png)
 
 However, the GoSign installer erroneously grants all local users full permissions to `c:\Program Files (x86)\RCSC\GoSign` folder:
 
-![Gosign folder permissions](gosign_acl.png)
+[![Gosign folder permissions](gosign_acl.png "Gosign folder permissions")](gosign_acl.png)
 
 This allows regular users to modify the `GoSign.exe` and `GoSignMonitor.exe` (or any dll they load). Since the executables run as LocalSystem it allows for Local Elevation of Privileges (EoP). Even though the issue may be dismissed by private users, in government institutions, where computers are usually managed by technicians and regular users have restricted permissions, this is a valuable vulnerability for EoP by malicious programs.
 
 Instead of fixing the installer to set the correct permissions to the root folder it was attempted to fix the issue in the version 3.3.4.0 by making GoSign service to verify and fix the permissions at runtime:
 
-![Gosign runtime ACL fix](gosign_acl_fix.png)
+[![Gosign runtime ACL fix](gosign_acl_fix.png "Gosign runtime ACL fix")](gosign_acl_fix.png)
 
 Firstly, it doesn't work at all, because GoSign attempts to remove an inherited permission. Also it says a lot about internal development and testing processes. Secondly, attempting to make such privileged operations at runtime doesn't make it easier to change the existing GoSign architecture to stop running its services as LocalSystem. All in all, the EoP is still not fixed.
 

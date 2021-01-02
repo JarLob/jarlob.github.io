@@ -89,7 +89,7 @@ A malicious web page may run a javascript that calls mtis2.m-transportas.lt on y
 Works with any Lithuanian mobile provider. Turn off WIFI and click on the link in your mobile device. (*Update 2020-04-02: The owner of m-transportas.lt SĮ „Susisiekimo paslaugos” updated the web service to break the PoC and assured on 2020-03-09 that they will make "architectural" changes in 1.5 month to mitigate the security issue.*)
 [http://www.devsecurity.eu/mobile-data-leak/](http://www.devsecurity.eu/mobile-data-leak/)
 
-![Screenshot](mobile-data-leak-poc.png)
+[![Screenshot](mobile-data-leak-poc.png "Screenshot")](mobile-data-leak-poc.png)
 
 ### Does the injected header prove anything?
 So these white-listed partners make security sensitive decisions based on a presence of a header. Let's try spoofing the identity. This time switch to WIFI and run the following command:
