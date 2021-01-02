@@ -2,7 +2,7 @@
 layout:     post
 title:      "Joplin ElectronJS based Client: from XSS to RCE"
 date:       2019-05-12 12:00:00
-categories: HackAndTell ElectronJS XSS RCE
+categories: HackAndTell ElectronJS
 cover:      electron.jpg
 permalink:  /en/blog/joplin-electron-rce
 ---

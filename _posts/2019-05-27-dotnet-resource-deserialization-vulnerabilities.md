@@ -2,7 +2,7 @@
 layout:     post
 title:      "Vulnerable deserialization in dnSpy and Resource.NET"
 date:       2019-05-27 12:00:00
-categories: HackAndTell Deserialization dnSpy Resource.NET
+categories: HackAndTell Deserialization
 cover:      bart-simpson-generator.png
 permalink:  /en/blog/dnspy-deserialization-vulnerability
 ---
