@@ -2,7 +2,7 @@
 layout:     post
 title:      "(Ne)atsakingas atskleidimas - 1-oji dalis"
 date:       2020-09-29 12:00:00
-categories: HackAndTell ResponsibleDisclosure
+categories: ResponsibleDisclosure
 cover:      
 permalink:  /lt/blog/neatsakingas-atskleidimas-1
 ---
