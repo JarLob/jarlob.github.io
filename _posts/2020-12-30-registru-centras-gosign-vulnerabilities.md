@@ -81,7 +81,7 @@ My recommendation was to implement a `Origin` header check on the server side, b
 
 ### Timeline
 
-2020.09.25-29 - Contacted [info@gosign.lt](mailto:info@gosign.lt), [info@elektroninis.lt](mailto:info@elektroninis.lt), [info@registrucentras.lt](mailto:info@registrucentras.lt) asking for the security contract.  
+2020.09.25-29 - Contacted [info@gosign.lt](mailto:info@gosign.lt), [info@elektroninis.lt](mailto:info@elektroninis.lt), [info@registrucentras.lt](mailto:info@registrucentras.lt) asking for the security contact.  
 2020.10.01 - A report was sent to [pagalba@elektroninis.lt](mailto:pagalba@elektroninis.lt).  
 2020.10.01 - The report was acknowledged.  
 2020.12.21 - Received an email that v3.3.4.0 with the fixes was released.  
