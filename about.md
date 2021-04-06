@@ -22,7 +22,7 @@ Arbitrary code execution in DatabaseSchemaReader - [CVE-2020-26207](https://secu
 Arbitrary Code Execution in FastReports - [CVE-2020-27998](https://securitylab.github.com/advisories/GHSL-2020-143-FastReportsInc-FastReports/)  
 SQL Injection in Mailtrain - [CVE-2020-24617](https://securitylab.github.com/advisories/GHSL-2020-132-Mailtrain/)  
 Path traversal vulnerability in Adobe git-server - [CVE-2020-9708](https://securitylab.github.com/advisories/GHSL-2020-133-Adobe-Git-server/)  
-Local privilege elevation vulnerability in Composer Windows installer - [CVE-2020-15145](https://github.com/composer/windows-setup/security/advisories/GHSA-wgrx-r3qv-332c)
+Local privilege elevation vulnerability in Composer Windows installer - [CVE-2020-15145](https://github.com/composer/windows-setup/security/advisories/GHSA-wgrx-r3qv-332c)  
 Authenticode signature validation bypass in [Autodesk Dynamo BIM (CVE-2020-7079) and SoundSwitch](/en/blog/Authenticode-verification-vulnerability-pattern-CreateFromSignedFile)  
 Arbitrary code execution in [Resource.NET](https://fishcodelib.com/Resource.htm) [(not fixed)](/en/blog/dnspy-deserialization-vulnerability)  
 Arbitrary code execution in [dnSpy](/en/blog/dnspy-deserialization-vulnerability)  
