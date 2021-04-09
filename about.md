@@ -14,6 +14,7 @@ You can find me on [Twitter](https://twitter.com/yarlob), [GitHub](https://githu
 
 ### Disclosures:
 Unauthenticated abritrary file read in Jellyfin - [CVE-2021-21402](https://securitylab.github.com/advisories/GHSL-2021-050-jellyfin/)  
+Remote Code Execution and Local Elevation of Privileges in [GoSign App](https://blog.devsecurity.eu/en/blog/registru-centras-gosign-vulnerabilities)  
 Weak JSON Web Token (JWT) signing secret in YApi - [CVE-2021-27884](https://securitylab.github.com/advisories/GHSL-2020-228-YMFE-yapi/)  
 Undocumented template expression evaluation in the gajira-comment GitHub action - [CVE-2020-14189](https://securitylab.github.com/advisories/GHSL-2020-173-gajira-comment-action/)  
 Undocumented template expression evaluation in the gajira-create GitHub action - [CVE-2020-14188](https://securitylab.github.com/advisories/GHSL-2020-172-gajira-create-action/)  
@@ -24,6 +25,7 @@ SQL Injection in Mailtrain - [CVE-2020-24617](https://securitylab.github.com/adv
 Path traversal vulnerability in Adobe git-server - [CVE-2020-9708](https://securitylab.github.com/advisories/GHSL-2020-133-Adobe-Git-server/)  
 Local privilege elevation vulnerability in Composer Windows installer - [CVE-2020-15145](https://github.com/composer/windows-setup/security/advisories/GHSA-wgrx-r3qv-332c)  
 Authenticode signature validation bypass in [Autodesk Dynamo BIM (CVE-2020-7079) and SoundSwitch](/en/blog/Authenticode-verification-vulnerability-pattern-CreateFromSignedFile)  
+Authorization bypass in [Tele2.lt self service website](https://blog.devsecurity.eu/lt/blog/tele2-savitarnos-autorizacijos-apejimas)  
 Arbitrary code execution in [Resource.NET](https://fishcodelib.com/Resource.htm) [(not fixed)](/en/blog/dnspy-deserialization-vulnerability)  
 Arbitrary code execution in [dnSpy](/en/blog/dnspy-deserialization-vulnerability)  
 Path Traversal in [Aspose.ZIP for .NET](https://docs.aspose.com/display/zipnet/Aspose.ZIP+for+.NET+19.1+Release+Notes)  
