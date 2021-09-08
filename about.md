@@ -13,7 +13,11 @@ Open source projects I am or was actively involved:
 You can find me on [Twitter](https://twitter.com/yarlob), [GitHub](https://github.com/JarLob), [Linkedin](https://www.linkedin.com/in/yarlob/) and you can reach me at jarlob+gh()gmail.com
 
 ### Disclosures:
-Unauthenticated abritrary file read in Jellyfin - [CVE-2021-21402](https://securitylab.github.com/advisories/GHSL-2021-050-jellyfin/)  
+Arbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution in npm/arborist- [CVE-2021-39135](https://github.com/advisories/GHSA-gmw6-94gg-2rc2)  
+Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization in npm/node-tar - [CVE-2021-37713](https://github.com/advisories/GHSA-5955-9wpr-37jh)  
+Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links in npm/node-tar - [CVE-2021-37712](https://github.com/advisories/GHSA-qq89-hq3f-393p)  
+Unauthenticated file read in Emby - [CVE-2021-32833](https://securitylab.github.com/advisories/GHSL-2021-051-emby/)  
+Unauthenticated arbitrary file read in Jellyfin - [CVE-2021-21402](https://securitylab.github.com/advisories/GHSL-2021-050-jellyfin/)  
 Remote Code Execution and Local Elevation of Privileges in [GoSign App](https://blog.devsecurity.eu/en/blog/registru-centras-gosign-vulnerabilities)  
 Weak JSON Web Token (JWT) signing secret in YApi - [CVE-2021-27884](https://securitylab.github.com/advisories/GHSL-2020-228-YMFE-yapi/)  
 Undocumented template expression evaluation in the gajira-comment GitHub action - [CVE-2020-14189](https://securitylab.github.com/advisories/GHSL-2020-173-gajira-comment-action/)  
