@@ -2,6 +2,7 @@
 layout: page
 title: About me 
 ---
+I am Application Security Researcher, static code analysis enthusiast, former Application Security Engineer, former Software Engineer with a solid development background. I have been on many sides: as a software developer, internal security auditor, external reporter, bug bounty submitter and triager.
 
 I have started as a desktop and backend C++/C# developer. While one part of me enjoyed creating programs, my other passion always was finding cracks and breaking things. After some time I've moved into the Information Security field where I feel I found a balance: I enjoy writing security tools and performing technical security assessments. In my free time I like researching security of third party products (both closed and open source).  
 
