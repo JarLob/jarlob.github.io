@@ -12,3 +12,4 @@ if [ -f Gemfile ]; then
 fi
 
 gem install jekyll
+jekyll serve
