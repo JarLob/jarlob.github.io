@@ -2,11 +2,7 @@ name: Jaroslav Lobačevski
 description:
 meta_description: "Jaroslav Lobačevski"
 future: true
-markdown: CommonMarkGhPages
-markup:
-  goldmark:
-    renderer:
-      unsafe: true
+markdown: kramdown
 highlighter: rouge
 logo: false
 paginate: 10
