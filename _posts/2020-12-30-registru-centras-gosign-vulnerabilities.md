@@ -61,10 +61,7 @@ https://appdevel4.kada.lan
 
 The common misconception about CORS is that it allows requests to the server only from the selected list. What it really does, it instructs the browser to allow a web page from a selected origin to _**read**_ the server response. Any web page is still able to issue a [simple request](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#Simple_requests) to the web server. The CORS list fixed the issue where malicious pages could read personal information from the inserted identity card. Still, in v3.2.2.0 it was possible to blindly call any of the API.
 
-The `/rest/loadApp` API commands GoSignUI to automatically download a file from the specified `url`, extract it if it is an archive and open in AutoDesk TrueView 2018 or AutoDesk DesignReview 2018 viewer.
-
-<details>
-  <summary>Proof of Concept:</summary>
+The `/rest/loadApp` API commands GoSignUI to automatically download a file from the specified `url`, extract it if it is an archive and open in AutoDesk TrueView 2018 or AutoDesk DesignReview 2018 viewer. Proof of Concept:
 
 ```html
 <script>
@@ -74,7 +71,6 @@ The `/rest/loadApp` API commands GoSignUI to automatically download a file from 
   })
 </script>
 ```
-</details>
 
 An attacker could:
 
