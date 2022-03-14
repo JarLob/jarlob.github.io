@@ -6,7 +6,7 @@ categories: HackAndTell
 cover:      
 permalink:  /lt/blog/contribee
 ---
-2022 m. vasario 24 d. Putinas įsiveržė į Ukrainą. Žmonės iš viso pasaulio aukojo pinigus ivarioms organizacijoms padėdančioms ukrainiečiams. Tuo tarpų kontroversiškas Patreon sprendimas [suspenduoti](https://www.cnbc.com/2022/02/24/patreon-suspends-come-back-alive-page-for-ukrainian-army-donations.html) ne pelno siekiančią organizaciją "Come Back Alive" sukėlė [rėzonansą](https://twitter.com/yarlob/status/1498235520878624769). Nemažai skaitmeninio tūrinio kūrėjų, bent Lietuvoje, persikelė į alternatyvią platformą [Contribee](https://contribee.com). Aš, kaip ir kiti prenumeratoriai, irgi užsiregistravau šiame puslapyje. Tačiau lengvas platformos paieškos testas parodė, kad ji gali turėti saugumo spragų.
+2022 m. vasario 24 d. Rusija įsiveržė į Ukrainą. Žmonės iš viso pasaulio aukojo pinigus ivarioms organizacijoms padėdančioms ukrainiečiams. Tuo tarpų kontroversiškas Patreon sprendimas [suspenduoti](https://www.cnbc.com/2022/02/24/patreon-suspends-come-back-alive-page-for-ukrainian-army-donations.html) ne pelno siekiančią organizaciją "Come Back Alive" sukėlė [rėzonansą](https://twitter.com/yarlob/status/1498235520878624769). Nemažai skaitmeninio tūrinio kūrėjų, bent Lietuvoje, persikelė į alternatyvią platformą [Contribee](https://contribee.com). Aš, kaip ir kiti prenumeratoriai, irgi užsiregistravau šiame puslapyje. Tačiau lengvas platformos paieškos testas parodė, kad ji gali turėti saugumo spragų.
 
 
 
