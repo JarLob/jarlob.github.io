@@ -1,9 +1,13 @@
 # Personal Page
 
-## Setup
-
+    based on Kasper
     git clone https://github.com/rosario/kasper.git
     cd kasper
+
+## Setup
+
     gem install jekyll
     gem install pygments.rb
-    jekyll serve
+    gem install jekyll-paginate
+    gem install webrick
+    jekyll serve --port 8000
