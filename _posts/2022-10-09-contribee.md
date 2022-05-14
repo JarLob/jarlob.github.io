@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Contribee - same same, but different"
-date:       2022-10-09 17:00:00
+date:       2022-06-09 17:00:00
 categories: HackAndTell
 cover:      contribee.png
 permalink:  /lt/blog/contribee
