@@ -11,7 +11,7 @@ Open source projects I am or was actively developing:
 [Security Code Scan](https://security-code-scan.github.io/) - Security static code analysis for C# and VB.NET.  
 [Electronegativity](https://github.com/doyensec/electronegativity) - Vulnerability patterns detector for JavaScript/TypeScript Electron applications.  
 
-You can find me on [Twitter](https://twitter.com/yarlob), [GitHub](https://github.com/JarLob), [Linkedin](https://www.linkedin.com/in/yarlob/) and you can reach me at jarlob+gh()gmail.com
+You can find me on [Twitter](https://twitter.com/yarlob), [GitHub](https://github.com/JarLob), [Linkedin](https://www.linkedin.com/in/yarlob/) and you can reach me at {{ site.email }}
 
 ### Disclosures:
 Arbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution in npm/arborist- [CVE-2021-39135](https://github.com/advisories/GHSA-gmw6-94gg-2rc2)  
