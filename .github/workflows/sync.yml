@@ -12,7 +12,7 @@ jobs:
         git config --global user.email "octokit@github.com"
         git config --global user.name "Octokit"
         git fetch upstream || exit 1
-        git config pull.ff only || exit
+        git config pull.rebase false || exit
         git pull upstream master || exit 1
         git push || exit 1
         git push upstream || exit 1
