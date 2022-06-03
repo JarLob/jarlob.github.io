@@ -4,7 +4,7 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
-
+    steps:
     - run: |
         git remote add upstream git://github.com/JarLob/jarlob.github.io.git
         git config --global user.email "octokit@github.com"
