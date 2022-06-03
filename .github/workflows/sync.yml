@@ -10,5 +10,9 @@ jobs:
         fetch-depth: 20
         
     - run: |
+        git remote add upstream git://github.com/JarLob/jarlob.github.io.git
+        git config --global user.email "octokit@github.com"
+        git config --global user.name "Octokit"
+        git fetch upstream || exit 1
         git pull upstream master || exit 1
         git push --force || exit 1
