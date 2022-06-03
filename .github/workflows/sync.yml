@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    - run: |
+        git remote add upstream git://github.com/JarLob/jarlob.github.io.git
+        git config --global user.email "octokit@github.com"
+        git config --global user.name "Octokit"
+        git fetch upstream || exit 1
+        git merge || exit 1
+        git push --force || exit 1
