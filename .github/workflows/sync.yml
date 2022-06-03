@@ -5,6 +5,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 20
+        
     - run: |
         git pull upstream master || exit 1
         git push --force || exit 1
