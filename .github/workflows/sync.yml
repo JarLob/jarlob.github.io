@@ -8,10 +8,17 @@ jobs:
     - uses: actions/checkout@v2
         
     - run: |
+        echo "git remote add upstream"
         git remote add upstream https://github.com/JarLob/jarlob.github.io.git
+        echo "git config --global user.email"
         git config --global user.email "octokit@github.com"
+        echo "git config --global user.name"
         git config --global user.name "Octokit"
+        echo "git fetch upstream"
         git fetch upstream || exit 1
+        echo "git config pull.rebase false"
         git config pull.rebase false || exit
+        echo "git pull upstream master"
         git pull upstream master || exit 1
+        echo "git push"
         git push || exit 1
