@@ -15,4 +15,3 @@ jobs:
         git config pull.rebase false || exit
         git pull upstream master || exit 1
         git push || exit 1
-        git push upstream || exit 1
