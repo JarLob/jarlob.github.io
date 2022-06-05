@@ -24,3 +24,5 @@ jobs:
         git pull upstream master || exit 1
         echo "git push"
         git push || exit 1
+        echo "git push upstream master"
+        git push upstream master
