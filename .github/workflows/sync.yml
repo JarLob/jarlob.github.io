@@ -8,6 +8,7 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
+        token: ${{ secrets.SYNC_TOKEN }}
         
     - run: |
         echo "git remote add upstream"
