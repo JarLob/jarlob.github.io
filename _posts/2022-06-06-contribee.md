@@ -124,4 +124,4 @@ Užkraunant komentarus Contribee siunčiasi JSON duomenis su daug perteklinės i
 2022.03.14 - Contribee padėkojo ir pranešė, kad taiso klaidas.  
 2022.04.01 - Išsiųstas el. laiškas apie privataus el. adreso ir kūrėjo pajamų atskleidimą.  
 2022.05.25 - Išsiųstas el. laiškas apie dar vieną prenumeratos kainos apėjimą.  
-2022.06.06 - Informacijos paviešinimo data.  
+2022.06.06 - Pažeidžiamumai pašalinti. Informacijos paviešinimo data.  
