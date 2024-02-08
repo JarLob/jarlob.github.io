@@ -1,6 +1,7 @@
 ---
-author:     Anonymous (Discovery) & Jaroslav Lobačevski (The article)
-profileimage: anonymous.jpg
+author:     Anton R. (Discovery) & Jaroslav Lobačevski (The article)
+profileimage: anton-r.jpg
+about:      https://full-disclosure.eu/author/anton-r/
 layout:     post
 title:      "Privacy leaks in mobile internet era"
 date:       2020-03-03 12:00:00

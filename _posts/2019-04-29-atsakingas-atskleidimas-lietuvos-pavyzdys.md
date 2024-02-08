@@ -1,6 +1,7 @@
 ---
-author:     Anonymous
-profileimage: anonymous.jpg
+author:     Anton R.
+profileimage: anton-r.jpg
+about:      https://full-disclosure.eu/author/anton-r/
 layout:     post
 title:      "Atsakingas atskleidimas. Lietuvos pavyzdys."
 date:       2019-04-29 12:00:00
