@@ -1,6 +1,7 @@
 ---
-author:     Anonymous
-profileimage: anonymous.jpg
+author:     Anton R.
+profileimage: anton-r.jpg
+about:      https://full-disclosure.eu/author/anton-r/
 layout:     post
 title:      "XSS serveriai.lt puslapyje"
 date:       2019-10-21 12:00:00
