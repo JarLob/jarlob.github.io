@@ -19,9 +19,13 @@ post_class: post-template
         <header class="post-header">
             <h1 class="post-title">{{ page.title }}</h1>
             <section class="post-meta">
-                {% if post.author %}
-                    <img class="author-thumb" src="{{'/assets/images/' | relative_url}}{{ post.profileimage }}" alt="Author's profile picture" nopin="nopin" />
-                    {{ post.author }}
+                {% if page.author %}
+                    <img class="author-thumb" src="{{'/assets/images/' | relative_url}}{{ page.profileimage }}" alt="Author's profile picture" nopin="nopin" />
+                    {% if page.about %}
+                        <a href="{{page.about | relative_url}}">{{ page.author }}</a>
+                    {% else %}
+                        {{ page.author }}
+                    {% endif %}
                 {% elsif site.author %}
                     <img class="author-thumb" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
                     <a href="{{site.about | relative_url}}">{{ site.author }}</a>
@@ -72,7 +76,7 @@ post_class: post-template
             <h5>Archive</h5>
             <ul>
                 {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url  | relative_url}}">{{ post.title }}</a></li>
+                    <li><span>{{ page.date | date_to_string }}</span>  <a href="{{ page.url  | relative_url}}">{{ page.title }}</a></li>
                 {% endfor %}
             </ul>
         </section>
@@ -82,7 +86,11 @@ post_class: post-template
             <!-- If we want to display author's name and bio -->
             {% if page.author %}
                 <figure class="author-image">
-                    <a class="img" href="{{'/' | relative_url }}" style="background-image: url({{'/assets/images/' | relative_url | append: page.profileimage }})">
+                    {% if page.about %}
+                        <a class="img" href="{{ page.about | relative_url }}" style="background-image: url({{'/assets/images/' | relative_url | append: page.profileimage }})"></a>
+                    {% else %}
+                        <a class="img" href="{{'/' | relative_url }}" style="background-image: url({{'/assets/images/' | relative_url | append: page.profileimage }})">
+                    {% endif %}
                     <span class="hidden">{{page.author}}'s Picture</span></a>
                 </figure>
                 <section class="author">

@@ -48,7 +48,11 @@ cover: assets/images/logo.webp
         <footer class="post-meta">
             {% if post.author %}
             <img class="author-thumb" src="{{'/assets/images/' | relative_url}}{{ post.profileimage }}" alt="Author's profile picture" nopin="nopin" />
-            {{ post.author }}
+                {% if post.about %}
+                    <a href="{{post.about | relative_url}}">{{ post.author }}</a>
+                {% else %}
+                    {{ post.author }}
+                {% endif %}
             {% elsif site.author %}
             <img class="author-thumb" src="{{'/assets/images/profile.png' | relative_url}}" alt="Author's profile picture" nopin="nopin" />
             <a href="{{site.about | relative_url}}">{{ site.author }}</a>
