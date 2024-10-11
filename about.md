@@ -14,6 +14,23 @@ Open source projects I am or was actively developing:
 You can find me on [Twitter](https://twitter.com/yarlob), [GitHub](https://github.com/JarLob), [Linkedin](https://www.linkedin.com/in/yarlob/) and you can reach me at {{ site.email }}
 
 ### Disclosures:
+Path traversal in [youtube-dl](https://securitylab.github.com/advisories/GHSL-2024-089_youtube-dl/) and [yt-dlp](https://securitylab.github.com/advisories/GHSL-2024-090_yt-dlp/) leading to RCE - [CVE-2024-38519](https://nvd.nist.gov/vuln/detail/CVE-2024-38519)  
+Insufficient markdown sanitization in nuget.org - [CVE-2024-37304](https://securitylab.github.com/advisories/GHSL-2024-016_NuGetGallery/)  
+LDAP injection in Redash - [CVE-2020-36144](https://securitylab.github.com/advisories/GHSL-2024-009_Redash/)  
+Several memory access violations in stb_image and stb_vorbis - [CVE-2023-45676 and others](https://securitylab.github.com/advisories/GHSL-2023-145_GHSL-2023-151_stb_image_h/)  
+Buffer Overflow in [uchardet](https://securitylab.github.com/advisories/GHSL-2023-105_uchardet/)  
+Buffer Overflows in Notepad++ - [CVE-2023-40031, CVE-2023-40036, CVE-2023-40164, CVE-2023-40166](https://securitylab.github.com/advisories/GHSL-2023-092_Notepad__/)  
+Stack exhaustion in jsonxx - [CVE-2022-23460](https://securitylab.github.com/advisories/GHSL-2022-049_Jsonxx/)  
+Double free in jsonxx - [CVE-2022-23459](https://securitylab.github.com/advisories/GHSL-2022-048_Jsonxx/)  
+Deserialization vulnerability in Orckestra C1 CMS - [CVE-2022-24789](https://securitylab.github.com/advisories/GHSL-2022-001_Orckestra_C1_CMS/)  
+Arbitrary file write during TAR extraction in Apache Hadoop - [CVE-2022-26612](https://securitylab.github.com/advisories/GHSL-2022-012_Apache_Hadoop/)  
+Path traversal in the OWASP Enterprise Security API (ESAPI)- [CVE-2022-23457](https://securitylab.github.com/advisories/GHSL-2022-008_The_OWASP_Enterprise_Security_API/)  
+Partial path traversal in [Apache Felix Atomos](https://securitylab.github.com/advisories/GHSL-2022-007_Apache_Felix_Atomos/)  
+Partial path traversal in Apache Karaf - [CVE-2022-22932](https://securitylab.github.com/advisories/GHSL-2022-005_006_Apache_Karaf/)  
+Partial path traversal in [Apache Pinot](https://securitylab.github.com/advisories/GHSL-2022-004_Apache_Pinot/)  
+Partial path traversal in Apache James Server - [CVE-2022-22931](https://securitylab.github.com/advisories/GHSL-2022-002_GHSL-2022-003_Apache_James_Server/)  
+Path traversal in SharpZipLib - [CVE-2021-32840, CVE-2021-32841, CVE-2021-32842](https://securitylab.github.com/advisories/GHSL-2021-125-sharpziplib/)  
+Path traversal in SharpCompress - [CVE-2021-39208](https://securitylab.github.com/advisories/GHSL-2021-082-sharpcompress/)  
 Arbitrary File Creation, Arbitrary File Overwrite, Arbitrary Code Execution in npm/arborist- [CVE-2021-39135](https://github.com/advisories/GHSA-gmw6-94gg-2rc2)  
 Arbitrary File Creation/Overwrite on Windows via insufficient relative path sanitization in npm/node-tar - [CVE-2021-37713](https://github.com/advisories/GHSA-5955-9wpr-37jh)  
 Arbitrary File Creation/Overwrite via insufficient symlink protection due to directory cache poisoning using symbolic links in npm/node-tar - [CVE-2021-37712](https://github.com/advisories/GHSA-qq89-hq3f-393p)  
